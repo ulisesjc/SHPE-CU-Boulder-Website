@@ -4,19 +4,69 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Calendar, Users, Award, ArrowRight, BookOpen, Briefcase, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroBackground from "@/assets/hero-background.jpg";
+import { useState, useEffect } from "react";
+import heroBackground1 from "@/assets/hero-background-1.jpg";
+import heroBackground2 from "@/assets/hero-background-2.jpg";
 
 const Index = () => {
+  const [scrollY, setScrollY] = useState(0);
+  const [backgroundOpacity, setBackgroundOpacity] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setScrollY(currentScrollY);
+      
+      // Calculate transition point (halfway through the page)
+      const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollProgress = currentScrollY / documentHeight;
+      
+      // Start transition at 40% scroll, complete at 60%
+      const transitionStart = 0.4;
+      const transitionEnd = 0.6;
+      
+      if (scrollProgress <= transitionStart) {
+        setBackgroundOpacity(0);
+      } else if (scrollProgress >= transitionEnd) {
+        setBackgroundOpacity(1);
+      } else {
+        const progress = (scrollProgress - transitionStart) / (transitionEnd - transitionStart);
+        setBackgroundOpacity(progress);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
+      {/* Fixed Background Images */}
+      <div className="fixed inset-0 z-0">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-300"
+          style={{ 
+            backgroundImage: `url(${heroBackground1})`,
+            opacity: 1 - backgroundOpacity
+          }}
+        />
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-300"
+          style={{ 
+            backgroundImage: `url(${heroBackground2})`,
+            opacity: backgroundOpacity
+          }}
+        />
+        <div className="absolute inset-0 bg-primary/60" />
+      </div>
+      
+      {/* Content */}
+      <div className="relative z-10">
       <Navigation />
       
       {/* Hero Section */}
-      <section 
-        className="relative min-h-[80vh] flex items-center justify-center bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBackground})` }}
-      >
-        <div className="absolute inset-0 bg-primary/80"></div>
+      <section className="relative min-h-[80vh] flex items-center justify-center">
+        <div className="absolute inset-0 bg-primary/20"></div>
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 animate-fade-in">
             Society of Hispanic
@@ -177,6 +227,7 @@ const Index = () => {
       </section>
 
       <Footer />
+      </div>
     </div>
   );
 };
