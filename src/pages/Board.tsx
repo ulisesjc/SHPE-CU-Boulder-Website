@@ -71,6 +71,50 @@ const Board = () => {
       email: "miguel.t@university.edu",
       linkedin: "#",
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face"
+    },
+    {
+      name: "Ana Morales",
+      position: "Academic Chair",
+      major: "Chemical Engineering",
+      year: "Junior",
+      location: "Corpus Christi, TX",
+      bio: "Research focus on sustainable chemistry and green energy solutions. ExxonMobil intern.",
+      email: "ana.m@university.edu",
+      linkedin: "#",
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=face"
+    },
+    {
+      name: "Roberto Gutierrez",
+      position: "Social Chair",
+      major: "Aerospace Engineering",
+      year: "Sophomore",
+      location: "McAllen, TX",
+      bio: "Passionate about space exploration and satellite technology. SpaceX engineering co-op.",
+      email: "roberto.g@university.edu",
+      linkedin: "#",
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face"
+    },
+    {
+      name: "Valeria Ramirez",
+      position: "Public Relations Chair",
+      major: "Environmental Engineering",
+      year: "Senior",
+      location: "Brownsville, TX",
+      bio: "Dedicated to environmental sustainability and water resource management. EPA internship.",
+      email: "valeria.r@university.edu",
+      linkedin: "#",
+      image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=400&fit=crop&crop=face"
+    },
+    {
+      name: "Luis Vega",
+      position: "Technical Chair",
+      major: "Software Engineering",
+      year: "Junior",
+      location: "Plano, TX",
+      bio: "Full-stack developer with expertise in AI and machine learning. Amazon SDE intern.",
+      email: "luis.v@university.edu",
+      linkedin: "#",
+      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face"
     }
   ];
 
@@ -97,7 +141,7 @@ const Board = () => {
             {boardMembers.map((member, index) => (
               <Card 
                 key={member.name} 
-                className="group hover:shadow-primary transition-all duration-300 hover:-translate-y-2 animate-fade-in"
+                className="group hover:shadow-primary hover:bg-accent/10 transition-all duration-300 hover:-translate-y-2 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader className="text-center pb-4">
