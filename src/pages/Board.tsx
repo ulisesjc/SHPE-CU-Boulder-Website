@@ -79,27 +79,27 @@ const Board = () => {
             {boardMembers.map((member, index) => (
               <Card 
                 key={member.name}
-                className="overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group border-0"
+                className="overflow-hidden shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group border-0"
               >
                 <div className={`${member.bgColor} p-8 flex items-center justify-center`}>
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
+                    className="w-32 h-32 object-cover border-4 border-white shadow-lg"
                   />
                 </div>
-                <CardContent className="p-6 text-center bg-white">
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">
-                    {member.name}
-                  </h3>
-                  <div className="flex items-center justify-center gap-1 mb-3">
+                <CardContent className="p-6 text-left bg-white">
+                  <div className="flex items-center gap-2 mb-2">
+                    <h3 className="text-xl font-bold text-gray-900">
+                      {member.name}
+                    </h3>
                     <Linkedin className="h-4 w-4 text-blue-600" />
                   </div>
-                  <p className="text-red-600 font-semibold text-sm mb-2">
-                    {member.position}
-                  </p>
                   <p className="text-gray-600 text-sm mb-1">
                     {member.major}
+                  </p>
+                  <p className="text-red-600 font-semibold text-sm mb-1">
+                    {member.position}
                   </p>
                   <p className="text-gray-600 text-sm">
                     {member.year}
