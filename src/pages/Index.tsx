@@ -5,8 +5,6 @@ import Footer from "@/components/Footer";
 import { Calendar, Users, Award, ArrowRight, BookOpen, Briefcase, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import heroBackground1 from "@/assets/hero-background-1.jpg";
-import heroBackground2 from "@/assets/hero-background-2.jpg";
 
 const Index = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -41,20 +39,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background relative">
-      {/* Fixed Background Images */}
+      {/* Fixed Background Image */}
       <div className="fixed inset-0 z-0">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-300"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
-            backgroundImage: `url(${heroBackground1})`,
-            opacity: 1 - backgroundOpacity
-          }}
-        />
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-300"
-          style={{ 
-            backgroundImage: `url(${heroBackground2})`,
-            opacity: backgroundOpacity
+            backgroundImage: `url(/lovable-uploads/11b3b9f8-8a03-4f65-aa45-ee132f76ce13.png)`
           }}
         />
         <div className="absolute inset-0 bg-primary/60" />
