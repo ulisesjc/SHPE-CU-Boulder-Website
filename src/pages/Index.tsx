@@ -59,8 +59,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-primary/20"></div>
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 animate-fade-in text-center">
-            Welcome to the
-            <span className="block text-accent animate-glow">Familia</span>
+            <span className="text-accent animate-glow">WELCOME TO THE FAMILIA</span>
           </h1>
           <p className="text-xl md:text-2xl text-primary-foreground/90 animate-fade-in max-w-3xl mx-auto text-center">
             SHPE CU Boulder
