@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import shpeLogo from "@/assets/shpe-logo.png";
+import cuBuffLogo from "@/assets/cu-buff-logo.png";
 
 const FlatironMountains = () => (
   <svg
@@ -50,16 +52,22 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-hero-gradient rounded-lg flex items-center justify-center group-hover:animate-glow transition-all">
-                <span className="text-primary-foreground font-bold text-lg">S</span>
-              </div>
-              <FlatironMountains />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-primary text-lg leading-none">SHPE</span>
-              <span className="text-xs text-muted-foreground leading-none">Chapter</span>
+          <Link to="/" className="flex items-center space-x-4 group">
+            <div className="flex items-center space-x-3">
+              {/* SHPE Logo */}
+              <img 
+                src={shpeLogo} 
+                alt="SHPE Logo" 
+                className="h-10 w-auto object-contain"
+              />
+              {/* Divider */}
+              <div className="h-8 w-px bg-border"></div>
+              {/* CU Buff Logo */}
+              <img 
+                src={cuBuffLogo} 
+                alt="CU Boulder Logo" 
+                className="h-10 w-auto object-contain"
+              />
             </div>
           </Link>
 
