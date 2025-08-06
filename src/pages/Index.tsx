@@ -59,12 +59,11 @@ const Index = () => {
         <div className="absolute inset-0 bg-primary/20"></div>
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 animate-fade-in">
-            Society of Hispanic
-            <span className="block text-accent animate-glow">Professional Engineers</span>
+            Welcome to the
+            <span className="block text-accent animate-glow">Familia</span>
           </h1>
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 animate-fade-in max-w-3xl mx-auto">
-            Empowering the next generation of Hispanic engineers through community, 
-            professional development, and academic excellence.
+            SHPE CU Boulder
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
             <Button size="lg" className="bg-accent hover:bg-accent-glow text-accent-foreground shadow-accent">
