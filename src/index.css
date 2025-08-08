@@ -18,10 +18,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 217 91% 8%;
 
-    /* Primary - Deep Navy Blue (#1D3159) */
-    --primary: 218 48% 22%;
+    /* Primary - Sophisticated Grey */
+    --primary: 220 9% 25%;
     --primary-foreground: 0 0% 98%;
-    --primary-glow: 218 48% 35%;
+    --primary-glow: 220 9% 40%;
 
     /* Secondary - Light Gray */
     --secondary: 0 0% 96%;
@@ -31,10 +31,10 @@
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
-    /* Accent - Bright Red-Orange (#F2522E) */
-    --accent: 12 88% 56%;
-    --accent-foreground: 0 0% 98%;
-    --accent-glow: 12 88% 70%;
+    /* Accent - CU Boulder Gold */
+    --accent: 45 70% 65%;
+    --accent-foreground: 220 9% 25%;
+    --accent-glow: 45 70% 75%;
 
     /* Status Colors */
     --destructive: 0 84% 60%;
@@ -46,14 +46,14 @@
     --ring: 0 0% 9%;
 
     /* Custom SHPE Colors */
-    --hero-gradient: linear-gradient(135deg, hsl(218 48% 22%), hsl(218 48% 35%));
-    --accent-gradient: linear-gradient(135deg, hsl(12 88% 56%), hsl(12 88% 70%));
+    --hero-gradient: linear-gradient(135deg, hsl(220 9% 25%), hsl(220 9% 40%));
+    --accent-gradient: linear-gradient(135deg, hsl(45 70% 65%), hsl(45 70% 75%));
     --subtle-gradient: linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 98%));
     
     /* Shadows */
-    --shadow-primary: 0 10px 30px -10px hsl(218 48% 22% / 0.3);
-    --shadow-accent: 0 10px 30px -10px hsl(12 88% 56% / 0.3);
-    --shadow-glow: 0 0 40px hsl(218 48% 35% / 0.4);
+    --shadow-primary: 0 10px 30px -10px hsl(220 9% 25% / 0.3);
+    --shadow-accent: 0 10px 30px -10px hsl(45 70% 65% / 0.3);
+    --shadow-glow: 0 0 40px hsl(220 9% 40% / 0.4);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
