@@ -62,7 +62,7 @@ const Index = () => {
             Welcome to the Familia!!
           </h1>
           <p className="text-xl md:text-2xl text-primary-foreground/90 animate-fade-in max-w-3xl mx-auto text-center">
-            SHPE CU Boulder
+            University of Colorado Boulder
           </p>
         </div>
       </section>
