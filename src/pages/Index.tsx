@@ -84,9 +84,9 @@ const Index = () => {
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
                   <BookOpen className="h-8 w-8 text-accent" />
                 </div>
-                <CardTitle className="text-primary">Academic Excellence</CardTitle>
+                <CardTitle className="text-primary">Awareness</CardTitle>
                 <CardDescription>
-                  Supporting academic success through tutoring, study groups, and mentorship programs.
+                  Awareness: bringing Hispanic/Latin American culture to campus, mentoring students in high school, outreach and volunteering in STEM
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -96,9 +96,9 @@ const Index = () => {
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
                   <Briefcase className="h-8 w-8 text-accent" />
                 </div>
-                <CardTitle className="text-primary">Professional Development</CardTitle>
+                <CardTitle className="text-primary">Development</CardTitle>
                 <CardDescription>
-                  Building career skills through workshops, networking events, and industry partnerships.
+                  Development: workshops on personal finance, networking, resume building, activism, and socially-bonded growth
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -108,9 +108,9 @@ const Index = () => {
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
                   <Heart className="h-8 w-8 text-accent" />
                 </div>
-                <CardTitle className="text-primary">Community Impact</CardTitle>
+                <CardTitle className="text-primary">Support</CardTitle>
                 <CardDescription>
-                  Making a difference through community service and STEM outreach programs.
+                  Support: the largest network of Hispanic students on campus, community-bonding, academic mentorship, social community, personal support
                 </CardDescription>
               </CardHeader>
             </Card>
