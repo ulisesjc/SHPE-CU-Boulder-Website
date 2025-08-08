@@ -129,8 +129,16 @@
 
 @layer components {
   .animate-light-up {
-    animation: light-up 2.5s ease-out forwards;
-    text-shadow: 0 0 20px hsl(var(--accent) / 0.8);
+    animation: light-up 3s ease-out forwards;
+    text-shadow: 
+      0 0 10px hsl(var(--accent) / 0.8),
+      0 0 20px hsl(var(--accent) / 0.6),
+      0 0 40px hsl(var(--accent) / 0.4),
+      0 0 60px hsl(var(--accent) / 0.2);
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
   }
 }
 
@@ -138,22 +146,59 @@
   0% {
     opacity: 0;
     text-shadow: 0 0 0px hsl(var(--accent) / 0);
-    transform: scale(0.9);
+    transform: scale(0.8);
+  }
+  25% {
+    opacity: 0.6;
+    text-shadow: 
+      0 0 20px hsl(var(--accent) / 1),
+      0 0 40px hsl(var(--accent) / 0.8),
+      0 0 60px hsl(var(--accent) / 0.6),
+      0 0 80px hsl(var(--accent) / 0.4);
+    transform: scale(1.05);
   }
   50% {
-    opacity: 0.8;
+    opacity: 0.9;
     text-shadow: 
-      0 0 10px hsl(var(--accent) / 0.8),
-      0 0 20px hsl(var(--accent) / 0.6),
-      0 0 30px hsl(var(--accent) / 0.4);
+      0 0 30px hsl(var(--accent) / 1),
+      0 0 60px hsl(var(--accent) / 0.8),
+      0 0 90px hsl(var(--accent) / 0.6),
+      0 0 120px hsl(var(--accent) / 0.4),
+      0 0 150px hsl(var(--accent) / 0.2);
+    transform: scale(1.1);
+  }
+  75% {
+    opacity: 1;
+    text-shadow: 
+      0 0 25px hsl(var(--accent) / 0.9),
+      0 0 50px hsl(var(--accent) / 0.7),
+      0 0 75px hsl(var(--accent) / 0.5),
+      0 0 100px hsl(var(--accent) / 0.3);
     transform: scale(1.02);
   }
   100% {
     opacity: 1;
     text-shadow: 
-      0 0 5px hsl(var(--accent) / 0.6),
-      0 0 10px hsl(var(--accent) / 0.4),
-      0 0 15px hsl(var(--accent) / 0.2);
+      0 0 15px hsl(var(--accent) / 0.8),
+      0 0 30px hsl(var(--accent) / 0.6),
+      0 0 45px hsl(var(--accent) / 0.4),
+      0 0 60px hsl(var(--accent) / 0.2);
     transform: scale(1);
+  }
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 
+      0 0 10px hsl(var(--accent) / 0.6),
+      0 0 20px hsl(var(--accent) / 0.4),
+      0 0 30px hsl(var(--accent) / 0.2);
+  }
+  100% {
+    text-shadow: 
+      0 0 20px hsl(var(--accent) / 0.8),
+      0 0 40px hsl(var(--accent) / 0.6),
+      0 0 60px hsl(var(--accent) / 0.4),
+      0 0 80px hsl(var(--accent) / 0.2);
   }
 }
