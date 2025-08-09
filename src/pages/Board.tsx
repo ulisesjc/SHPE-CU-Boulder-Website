@@ -147,8 +147,6 @@ const Board = () => {
                   </div>
                   
                   <div className="flex items-center justify-center text-sm text-muted-foreground">
-                    <MapPin className="h-4 w-4 mr-1" />
-                    {member.location}
                   </div>
                   
                   <CardDescription className="text-center leading-relaxed">
