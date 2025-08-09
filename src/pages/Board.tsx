@@ -128,9 +128,6 @@ const Board = () => {
           <h1 className="text-5xl font-bold text-primary-foreground mb-6 animate-fade-in">
             Meet Our Board
           </h1>
-          <p className="text-xl text-primary-foreground/90 animate-fade-in max-w-3xl mx-auto">
-            Dedicated student leaders driving our chapter's mission forward and creating opportunities for all members.
-          </p>
         </div>
       </section>
 
@@ -197,27 +194,6 @@ const Board = () => {
         </div>
       </section>
 
-      {/* Leadership Message */}
-      <section className="py-20 bg-subtle-gradient">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="shadow-primary">
-            <CardHeader className="text-center">
-              <CardTitle className="text-3xl text-primary mb-4">A Message from Our Leadership</CardTitle>
-            </CardHeader>
-            <CardContent className="text-center">
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                "Our board is committed to creating an inclusive environment where every member can thrive. 
-                We believe that diversity in engineering leads to innovation, and we're dedicated to supporting 
-                each other's academic and professional journeys. Together, we're not just building careers – 
-                we're building a legacy for future generations of Hispanic engineers."
-              </p>
-              <div className="text-primary font-semibold">
-                - SHPE Chapter Executive Board
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
 
       {/* Join Board CTA */}
       <section className="py-20 bg-primary">

@@ -13,9 +13,9 @@ const Footer = () => {
                 <span className="text-accent-foreground font-bold text-lg">S</span>
               </div>
               <div className="flex flex-col">
-                <span className="font-bold text-lg leading-none">SHPE Chapter</span>
+                <span className="font-bold text-lg leading-none">SHPE</span>
                 <span className="text-sm text-primary-foreground/80 leading-none">
-                  Society of Hispanic Professional Engineers
+                  University of Colorado Boulder
                 </span>
               </div>
             </div>
@@ -87,7 +87,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-primary-foreground/60 text-sm">
-            © 2024 SHPE University Chapter. All rights reserved.
+            © 2025 SHPE CU Boulder. All rights reserved.
           </p>
         </div>
       </div>
