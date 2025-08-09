@@ -11,8 +11,6 @@ const Board = () => {
       position: "President",
       major: "Computer Engineering",
       year: "Senior",
-      location: "San Antonio, TX",
-      bio: "Passionate about increasing representation of Hispanics in tech. Interned at Google and Microsoft.",
       email: "maria.r@university.edu",
       linkedin: "#",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=400&h=400&fit=crop&crop=face"
@@ -22,8 +20,6 @@ const Board = () => {
       position: "Vice President",
       major: "Mechanical Engineering",
       year: "Junior", 
-      location: "Houston, TX",
-      bio: "Focus on sustainable engineering solutions and renewable energy systems. NASA USRP intern.",
       email: "carlos.m@university.edu",
       linkedin: "#",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
@@ -33,8 +29,6 @@ const Board = () => {
       position: "Secretary",
       major: "Biomedical Engineering",
       year: "Sophomore",
-      location: "Austin, TX",
-      bio: "Interested in medical device innovation and healthcare technology. Research assistant in biotech lab.",
       email: "isabella.g@university.edu",
       linkedin: "#",
       image: "https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?w=400&h=400&fit=crop&crop=face"
@@ -55,8 +49,6 @@ const Board = () => {
       position: "Professional Development Chair",
       major: "Electrical Engineering",
       year: "Senior",
-      location: "El Paso, TX",
-      bio: "Specializes in power systems and smart grid technology. Tesla engineering intern.",
       email: "sofia.l@university.edu",
       linkedin: "#",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face"
@@ -66,8 +58,6 @@ const Board = () => {
       position: "Community Outreach Chair",
       major: "Civil Engineering",
       year: "Senior",
-      location: "Laredo, TX",
-      bio: "Passionate about infrastructure development and community impact. Fluor Corporation intern.",
       email: "miguel.t@university.edu",
       linkedin: "#",
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face"
@@ -77,8 +67,6 @@ const Board = () => {
       position: "Academic Chair",
       major: "Chemical Engineering",
       year: "Junior",
-      location: "Corpus Christi, TX",
-      bio: "Research focus on sustainable chemistry and green energy solutions. ExxonMobil intern.",
       email: "ana.m@university.edu",
       linkedin: "#",
       image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=face"
@@ -88,8 +76,6 @@ const Board = () => {
       position: "Social Chair",
       major: "Aerospace Engineering",
       year: "Sophomore",
-      location: "McAllen, TX",
-      bio: "Passionate about space exploration and satellite technology. SpaceX engineering co-op.",
       email: "roberto.g@university.edu",
       linkedin: "#",
       image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face"
@@ -99,8 +85,6 @@ const Board = () => {
       position: "Public Relations Chair",
       major: "Environmental Engineering",
       year: "Senior",
-      location: "Brownsville, TX",
-      bio: "Dedicated to environmental sustainability and water resource management. EPA internship.",
       email: "valeria.r@university.edu",
       linkedin: "#",
       image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=400&fit=crop&crop=face"
@@ -110,8 +94,6 @@ const Board = () => {
       position: "Technical Chair",
       major: "Software Engineering",
       year: "Junior",
-      location: "Plano, TX",
-      bio: "Full-stack developer with expertise in AI and machine learning. Amazon SDE intern.",
       email: "luis.v@university.edu",
       linkedin: "#",
       image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face"
