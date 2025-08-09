@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import shpeLogo from "@/assets/shpe-logo.png";
-import cuBuffLogo from "@/assets/cu-buff-logo.png";
+const cuBuffLogo = "/lovable-uploads/b2fe01b9-d075-4a21-8af7-219fededa41a.png";
 
 const FlatironMountains = () => (
   <svg
