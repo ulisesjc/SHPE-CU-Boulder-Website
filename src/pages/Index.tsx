@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Calendar, Users, Award, ArrowRight, BookOpen, Briefcase, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import myPhoto from "@/assets/mainpage.jpeg";
 
 const Index = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -44,7 +45,7 @@ const Index = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
-            backgroundImage: `url(/lovable-uploads/11b3b9f8-8a03-4f65-aa45-ee132f76ce13.png)`
+            backgroundImage: {myPhoto}
           }}
         />
         <div className="absolute inset-0 bg-primary/60" />
@@ -59,7 +60,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-primary/20"></div>
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-accent mb-6 animate-light-up text-center">
-            Welcome to the Familia!!
+            Welcome to CU SHPE!!
           </h1>
           <p className="text-xl md:text-2xl text-primary-foreground/90 animate-fade-in max-w-3xl mx-auto text-center">
             University of Colorado Boulder
