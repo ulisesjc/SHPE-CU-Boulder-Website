@@ -13,7 +13,7 @@ const Board = () => {
       year: "Senior",
       email: "maria.r@university.edu",
       linkedin: "#",
-      image: "@/assets/Sanchez_Kevin_Photo.jpg"
+      image: "@/assets/Cortez_Ulises_Photo.jpeg"
     },
     {
       name: "Eduardo Lopez Landeros",
