@@ -142,14 +142,14 @@ const Board = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader className="text-center pb-4">
-                  <div className="relative mx-auto mb-4">
+                  <div className="relative mx-auto mb-6">
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-24 h-24 rounded-full object-cover border-4 border-accent/20 group-hover:border-accent/40 transition-colors"
+                      className="w-40 h-40 rounded-full object-cover border-4 border-accent/20 group-hover:border-accent/40 transition-colors"
                     />
-                    <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-accent rounded-full flex items-center justify-center">
-                      <GraduationCap className="h-4 w-4 text-accent-foreground" />
+                    <div className="absolute -bottom-3 -right-3 w-10 h-10 bg-accent rounded-full flex items-center justify-center">
+                      <GraduationCap className="h-5 w-5 text-accent-foreground" />
                     </div>
                   </div>
                   <CardTitle className="text-primary text-xl">{member.name}</CardTitle>
