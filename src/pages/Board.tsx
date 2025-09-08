@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Mail, Linkedin, GraduationCap, MapPin } from "lucide-react";
+import myPhoto from "@/assets/mainpage.jpeg";
 
 const Board = () => {
   const boardMembers = [
@@ -13,7 +14,7 @@ const Board = () => {
       year: "Senior",
       email: "maria.r@university.edu",
       linkedin: "#",
-      image: "/Users/jc/Downloads/drive-download-20250908T044607Z-1-001/Alan_Ayala_Photo.jpg"
+      image: myPhoto
     },
     {
       name: "Eduardo Lopez Landeros",
