@@ -5,16 +5,16 @@ import { Badge } from "@/components/ui/badge";
 import { Mail, Linkedin, GraduationCap, MapPin } from "lucide-react";
 import kevin from "@/assets/Sanchez_Kevin_Photo.jpg";
 import fernanda from "@/assets/Fernanda_Photo.jpg";
-import nallely from "@/assets/mainpage.jpeg";
+import nallely from "@/assets/Saucedo_Nallely_Photo.jpg";
 import rachel from "@/assets/rachel_headshot.jpg";
 import alan from "@/assets/Alan_Ayala_Photo.jpg";
 import isai from "@/assets/mainpage.jpeg";
 import ulises from "@/assets/Cortez_Ulises_Photo.jpeg";
-import ari from "@/assets/Ari_s Pic.jpeg";
+import ari from "@/assets/Ari_sPic.jpeg";
 import tato from "@/assets/IMG_0867.jpg";
-import bernadette from "@/assets/IMG_7071(1).JPG";
+import bernadette from "@/assets/IMG_7071.jpg";
 import jose from "@/assets/Saucedo_Jose_Photo.jpg";
-import felipe from "@/assets/Garca_Felipe.jpg";
+import felipe from "@/assets/Garza_Felipe.jpg";
 
 
 
