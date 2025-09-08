@@ -7,25 +7,25 @@ import { Mail, Linkedin, GraduationCap, MapPin } from "lucide-react";
 const Board = () => {
   const boardMembers = [
     {
-      name: "Maria Rodriguez",
+      name: "Kevin Sanchez",
       position: "President",
-      major: "Computer Engineering",
+      major: "Information Science",
       year: "Senior",
       email: "maria.r@university.edu",
       linkedin: "#",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=400&h=400&fit=crop&crop=face"
     },
     {
-      name: "Carlos Martinez",
+      name: "Eduardo Lopez Landeros",
       position: "Vice President",
-      major: "Mechanical Engineering",
-      year: "Junior", 
+      major: "Aerospace Engineering",
+      year: "Senior", 
       email: "carlos.m@university.edu",
       linkedin: "#",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
     },
     {
-      name: "Isabella Garcia",
+      name: "Rachel Zamora",
       position: "Secretary",
       major: "Biomedical Engineering",
       year: "Sophomore",
@@ -34,10 +34,10 @@ const Board = () => {
       image: "https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?w=400&h=400&fit=crop&crop=face"
     },
     {
-      name: "Diego Hernandez",
+      name: "Bernadette Weigang",
       position: "Treasurer",
-      major: "Industrial Engineering",
-      year: "Junior",
+      major: "Aerospace Engineering",
+      year: "Senior",
       location: "Dallas, TX",
       bio: "Expertise in operations research and supply chain optimization. Ford Motor Company intern.",
       email: "diego.h@university.edu",
@@ -45,55 +45,73 @@ const Board = () => {
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
     },
     {
-      name: "Sofia Lopez",
-      position: "Professional Development Chair",
-      major: "Electrical Engineering",
+      name: "Felipe Garza Cancino",
+      position: "Public Relations",
+      major: "Aerospace Engineering",
       year: "Senior",
       email: "sofia.l@university.edu",
       linkedin: "#",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face"
     },
     {
-      name: "Miguel Torres",
-      position: "Community Outreach Chair",
-      major: "Civil Engineering",
-      year: "Senior",
+      name: "Fernanda Arias Aguilar",
+      position: "Social Media Coordinator",
+      major: "Architectual Engineering",
+      year: "Junior",
       email: "miguel.t@university.edu",
       linkedin: "#",
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face"
     },
     {
-      name: "Ana Morales",
-      position: "Academic Chair",
+      name: "Jose Alberto Saucedo",
+      position: "Mechanical Engineering",
       major: "Chemical Engineering",
-      year: "Junior",
+      year: "Senior",
       email: "ana.m@university.edu",
       linkedin: "#",
       image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=face"
     },
     {
-      name: "Roberto Gutierrez",
-      position: "Social Chair",
-      major: "Aerospace Engineering",
-      year: "Sophomore",
+      name: "Alan Ayala",
+      position: "Outreach Coordinator",
+      major: "Computer Science",
+      year: "Junior",
       email: "roberto.g@university.edu",
       linkedin: "#",
       image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face"
     },
     {
-      name: "Valeria Ramirez",
-      position: "Public Relations Chair",
-      major: "Environmental Engineering",
-      year: "Senior",
+      name: "Ulises Cortez",
+      position: "Webmaster",
+      major: "Computer Science Engineering",
+      year: "Junior",
       email: "valeria.r@university.edu",
       linkedin: "#",
       image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=400&fit=crop&crop=face"
     },
     {
-      name: "Luis Vega",
-      position: "Technical Chair",
+      name: "Nallely Saucedo",
+      position: "Professional Development",
       major: "Software Engineering",
       year: "Junior",
+      email: "luis.v@university.edu",
+      linkedin: "#",
+      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face"
+    },
+    {
+      name: "Ari Quezada Caro",
+      position: "Engagement Coordinator",
+      major: "Chemical Engineering",
+      year: "Senior",
+      email: "luis.v@university.edu",
+      linkedin: "#",
+      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face"
+    },
+    {
+      name: "Isai Marcial",
+      position: "Historian",
+      major: "Mechanical Engineer",
+      year: "Sophomore",
       email: "luis.v@university.edu",
       linkedin: "#",
       image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face"
