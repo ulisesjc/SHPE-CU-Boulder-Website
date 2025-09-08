@@ -22,7 +22,7 @@ const Board = () => {
       year: "Senior", 
       email: "carlos.m@university.edu",
       linkedin: "#",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+      image: "/images/tato.jpg"
     },
     {
       name: "Rachel Zamora",
@@ -31,7 +31,7 @@ const Board = () => {
       year: "Sophomore",
       email: "isabella.g@university.edu",
       linkedin: "#",
-      image: "https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?w=400&h=400&fit=crop&crop=face"
+      image: "/images/rachel_headshot.jpg"
     },
     {
       name: "Bernadette Weigang",
@@ -42,7 +42,7 @@ const Board = () => {
       bio: "Expertise in operations research and supply chain optimization. Ford Motor Company intern.",
       email: "diego.h@university.edu",
       linkedin: "#",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
+      image: "/images/bern.jpg"
     },
     {
       name: "Felipe Garza Cancino",
@@ -51,7 +51,7 @@ const Board = () => {
       year: "Senior",
       email: "sofia.l@university.edu",
       linkedin: "#",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face"
+      image: "/images/Garza_Felipe.jpg"
     },
     {
       name: "Fernanda Arias Aguilar",
@@ -60,7 +60,7 @@ const Board = () => {
       year: "Junior",
       email: "miguel.t@university.edu",
       linkedin: "#",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face"
+      image: "/images/Fernanda_Photo.jpg"
     },
     {
       name: "Jose Alberto Saucedo",
@@ -69,7 +69,7 @@ const Board = () => {
       year: "Senior",
       email: "ana.m@university.edu",
       linkedin: "#",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=face"
+      image: "/images/Saucedo_Jose_Photo.jpg"
     },
     {
       name: "Alan Ayala",
@@ -78,7 +78,7 @@ const Board = () => {
       year: "Junior",
       email: "roberto.g@university.edu",
       linkedin: "#",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face"
+      image: "/images/Alan_Ayala_Photo.jpg"
     },
     {
       name: "Ulises Cortez",
@@ -87,7 +87,7 @@ const Board = () => {
       year: "Junior",
       email: "valeria.r@university.edu",
       linkedin: "#",
-      image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=400&fit=crop&crop=face"
+      image: "/images/Cortez_Ulises_Photo.jpeg"
     },
     {
       name: "Nallely Saucedo",
@@ -96,7 +96,7 @@ const Board = () => {
       year: "Junior",
       email: "luis.v@university.edu",
       linkedin: "#",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face"
+      image: "/images/Saucedo_Nallely_Photo.jpg"
     },
     {
       name: "Ari Quezada Caro",
@@ -105,7 +105,7 @@ const Board = () => {
       year: "Senior",
       email: "luis.v@university.edu",
       linkedin: "#",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face"
+      image: "/images/Ari_sPic.jpeg"
     },
     {
       name: "Isai Marcial",
@@ -114,7 +114,7 @@ const Board = () => {
       year: "Sophomore",
       email: "luis.v@university.edu",
       linkedin: "#",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face"
+      image: "/images/Sanchez_Kevin_Photo.jpg"
     }
   ];
 
