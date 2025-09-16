@@ -11,8 +11,8 @@ const Board = () => {
       position: "President",
       major: "Information Science",
       year: "Senior",
-      email: "maria.r@university.edu",
-      linkedin: "#",
+      email: "",
+      linkedin: "https://www.linkedin.com/in/kevin-sanchez-507564249/",
       image: "/images/Sanchez_Kevin_Photo.jpg"
     },
     {
@@ -20,8 +20,8 @@ const Board = () => {
       position: "Vice President",
       major: "Aerospace Engineering",
       year: "Senior", 
-      email: "carlos.m@university.edu",
-      linkedin: "#",
+      email: "",
+      linkedin: "https://www.linkedin.com/in/eduardolopezl/",
       image: "/images/tato.jpg"
     },
     {
@@ -29,8 +29,8 @@ const Board = () => {
       position: "Secretary",
       major: "Biomedical Engineering",
       year: "Sophomore",
-      email: "isabella.g@university.edu",
-      linkedin: "#",
+      email: "",
+      linkedin: "https://www.linkedin.com/in/rachel-m-zamora/",
       image: "/images/rachel_headshot.jpg"
     },
     {
@@ -38,10 +38,8 @@ const Board = () => {
       position: "Treasurer",
       major: "Aerospace Engineering",
       year: "Senior",
-      location: "Dallas, TX",
-      bio: "Expertise in operations research and supply chain optimization. Ford Motor Company intern.",
-      email: "diego.h@university.edu",
-      linkedin: "#",
+      email: "",
+      linkedin: "https://www.linkedin.com/in/bernadette-weigang/",
       image: "/images/bern.jpg"
     },
     {
@@ -49,8 +47,8 @@ const Board = () => {
       position: "Public Relations",
       major: "Aerospace Engineering",
       year: "Senior",
-      email: "sofia.l@university.edu",
-      linkedin: "#",
+      email: "",
+      linkedin: "https://www.linkedin.com/in/felipegarzacancino/",
       image: "/images/Garza_Felipe.jpg"
     },
     {
@@ -58,17 +56,17 @@ const Board = () => {
       position: "Social Media Coordinator",
       major: "Architectual Engineering",
       year: "Junior",
-      email: "miguel.t@university.edu",
-      linkedin: "#",
+      email: "",
+      linkedin: "https://www.linkedin.com/in/fernanda-arias-aguilar-894063280/",
       image: "/images/Fernanda_Photo.jpg"
     },
     {
       name: "Jose Alberto Saucedo",
-      position: "Mechanical Engineering",
-      major: "Chemical Engineering",
+      position: "Academic Chair",
+      major: "Mechanical Engineering",
       year: "Senior",
-      email: "ana.m@university.edu",
-      linkedin: "#",
+      email: "",
+      linkedin: "https://www.linkedin.com/in/jose-a-saucedo/",
       image: "/images/Saucedo_Jose_Photo.jpg"
     },
     {
@@ -76,8 +74,8 @@ const Board = () => {
       position: "Outreach Coordinator",
       major: "Computer Science",
       year: "Junior",
-      email: "roberto.g@university.edu",
-      linkedin: "#",
+      email: "",
+      linkedin: "https://www.linkedin.com/in/alan-xa24/",
       image: "/images/Alan_Ayala_Photo.jpg"
     },
     {
@@ -85,17 +83,17 @@ const Board = () => {
       position: "Webmaster",
       major: "Computer Science Engineering",
       year: "Junior",
-      email: "valeria.r@university.edu",
-      linkedin: "#",
+      email: "",
+      linkedin: "https://www.linkedin.com/in/ulisesjc/",
       image: "/images/Cortez_Ulises_Photo.jpeg"
     },
     {
       name: "Nallely Saucedo",
       position: "Professional Development",
-      major: "Software Engineering",
-      year: "Junior",
-      email: "luis.v@university.edu",
-      linkedin: "#",
+      major: "Chemical Engineering",
+      year: "Senior",
+      email: "",
+      linkedin: "https://www.linkedin.com/in/nallely-saucedo-099977251/",
       image: "/images/Saucedo_Nallely_Photo.jpg"
     },
     {
@@ -103,16 +101,16 @@ const Board = () => {
       position: "Engagement Coordinator",
       major: "Chemical Engineering",
       year: "Senior",
-      email: "luis.v@university.edu",
-      linkedin: "#",
+      email: "",
+      linkedin: "https://www.linkedin.com/in/ariquezadacaro/",
       image: "/images/Ari_sPic.jpeg"
     },
     {
       name: "Isai Marcial",
       position: "Historian",
-      major: "Mechanical Engineer",
+      major: "Mechanical Engineering",
       year: "Sophomore",
-      email: "luis.v@university.edu",
+      email: "",
       linkedin: "#",
       image: "/images/Sanchez_Kevin_Photo.jpg"
     }
@@ -138,7 +136,7 @@ const Board = () => {
             {boardMembers.map((member, index) => (
               <Card 
                 key={member.name} 
-                className="group hover:shadow-primary hover:bg-accent/10 transition-all duration-300 hover:-translate-y-2 animate-fade-in"
+                className="group transition-transform duration-200 hover:-translate-y-1 hover:scale-105 hover:shadow-lg"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader className="text-center pb-4">

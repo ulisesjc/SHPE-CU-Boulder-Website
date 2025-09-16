@@ -288,7 +288,7 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  We hold general meetings every other Tuesday at 6:00 PM in the Engineering Building. 
+                  We hold general meetings every other Wednesday at 6:00 PM in the Campos Student Center. 
                   We also host various events throughout the semester including workshops, social events, 
                   and community service projects.
                 </p>

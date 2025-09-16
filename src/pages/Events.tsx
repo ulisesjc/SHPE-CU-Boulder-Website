@@ -56,7 +56,7 @@ const Events = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       <main className="container mx-auto px-4 py-12">
         {/* Header */}
         <div className="text-center mb-12">
@@ -78,14 +78,14 @@ const Events = () => {
                   Event Calendar
                 </CardTitle>
                 <div className="flex gap-2">
-                  <Button 
+                  <Button
                     variant={view === 'month' ? 'default' : 'outline'}
                     size="sm"
                     onClick={() => setView('month')}
                   >
                     Month
                   </Button>
-                  <Button 
+                  <Button
                     variant={view === 'agenda' ? 'default' : 'outline'}
                     size="sm"
                     onClick={() => setView('agenda')}
@@ -111,62 +111,74 @@ const Events = () => {
 
           {/* Upcoming Events Sidebar */}
           <div className="space-y-6">
-            <Card className="animate-fade-in">
-              <CardHeader>
-                <CardTitle>Upcoming Events</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                {upcomingEvents.map((event) => (
-                  <div key={event.id} className="border-l-4 border-accent pl-4 py-2">
-                    <h3 className="font-semibold text-primary mb-1">{event.title}</h3>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground mb-1">
-                      <Clock className="h-4 w-4" />
-                      {moment(event.start).format('MMM D, YYYY - h:mm A')}
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                      <MapPin className="h-4 w-4" />
-                      {event.location}
-                    </div>
-                    <p className="text-sm text-muted-foreground">{event.description}</p>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
+          <Card className="animate-fade-in">
+            <CardHeader>
+              <CardTitle>Upcoming Events</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              {/* Instagram Post 1 */}
+              <iframe
+                src="https://www.instagram.com/p/DOEb3TpDg57/?utm_source=ig_web_copy_link"
+                width="100%"
+                height="500"
+                frameBorder="0"
+                scrolling="no"
+                allowTransparency
+                allow="encrypted-media"
+                className="rounded-md"
+              ></iframe>
 
-            <Card className="animate-fade-in">
-              <CardHeader>
-                <CardTitle>Quick Actions</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <Button className="w-full bg-accent hover:bg-accent-glow text-accent-foreground">
-                  Submit Event Proposal
-                </Button>
-                <Button variant="outline" className="w-full">
-                  Export Calendar
-                </Button>
-                <Button variant="outline" className="w-full">
-                  Subscribe to Updates
-                </Button>
-              </CardContent>
-            </Card>
+              {/* Instagram Post 2 */}
+              <iframe
+                src="https://www.instagram.com/p/DOEb3TpDg57/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                width="100%"
+                height="500"
+                frameBorder="0"
+                scrolling="no"
+                allowTransparency
+                allow="encrypted-media"
+                className="rounded-md"
+              ></iframe>
+            </CardContent>
+          </Card>
 
-            <Card className="bg-hero-gradient text-primary-foreground animate-fade-in">
-              <CardContent className="p-6 text-center">
-                <h3 className="font-bold mb-2">Stay Connected</h3>
-                <p className="text-sm mb-4 opacity-90">
-                  Follow our social media for real-time updates and announcements
-                </p>
+          <Card className="animate-fade-in">
+            <CardHeader>
+              <CardTitle>Quick Actions</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <Button className="w-full bg-accent hover:bg-accent-glow text-accent-foreground">
+                Submit Event Proposal
+              </Button>
+              <Button variant="outline" className="w-full">
+                Subscribe to Updates
+              </Button>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-hero-gradient text-primary-foreground animate-fade-in">
+            <CardContent className="p-6 text-center">
+              <h3 className="font-bold mb-2">Stay Connected</h3>
+              <p className="text-sm mb-4 opacity-90">
+                Follow our social media for real-time updates and announcements
+              </p>
+              <a
+                href="https://www.instagram.com/cuboulder_shpemaes/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button variant="secondary" size="sm">
                   Follow Us
                 </Button>
-              </CardContent>
-            </Card>
-          </div>
+              </a>
+            </CardContent>
+          </Card>
         </div>
-      </main>
-
-      <Footer />
     </div>
+      </main >
+
+  <Footer />
+    </div >
   );
 };
 
