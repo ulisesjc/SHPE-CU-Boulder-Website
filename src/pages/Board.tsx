@@ -11,6 +11,7 @@ const Board = () => {
       position: "President",
       major: "Information Science",
       year: "Senior",
+      email: "",
       linkedin: "https://www.linkedin.com/in/kevin-sanchez-507564249/",
       image: "/images/Sanchez_Kevin_Photo.jpg"
     },
@@ -19,6 +20,7 @@ const Board = () => {
       position: "Vice President",
       major: "Aerospace Engineering",
       year: "Senior", 
+      email: "",
       linkedin: "https://www.linkedin.com/in/eduardolopezl/",
       image: "/images/tato.jpg"
     },
@@ -27,6 +29,7 @@ const Board = () => {
       position: "Secretary",
       major: "Biomedical Engineering",
       year: "Sophomore",
+      email: "",
       linkedin: "https://www.linkedin.com/in/rachel-m-zamora/",
       image: "/images/rachel_headshot.jpg"
     },
@@ -35,6 +38,7 @@ const Board = () => {
       position: "Treasurer",
       major: "Aerospace Engineering",
       year: "Senior",
+      email: "",
       linkedin: "https://www.linkedin.com/in/bernadette-weigang/",
       image: "/images/bern.jpg"
     },
@@ -43,6 +47,7 @@ const Board = () => {
       position: "Public Relations",
       major: "Aerospace Engineering",
       year: "Senior",
+      email: "",
       linkedin: "https://www.linkedin.com/in/felipegarzacancino/",
       image: "/images/Garza_Felipe.jpg"
     },
@@ -51,6 +56,7 @@ const Board = () => {
       position: "Social Media Coordinator",
       major: "Architectual Engineering",
       year: "Junior",
+      email: "",
       linkedin: "https://www.linkedin.com/in/fernanda-arias-aguilar-894063280/",
       image: "/images/Fernanda_Photo.jpg"
     },
@@ -59,6 +65,7 @@ const Board = () => {
       position: "Academic Chair",
       major: "Mechanical Engineering",
       year: "Senior",
+      email: "",
       linkedin: "https://www.linkedin.com/in/jose-a-saucedo/",
       image: "/images/Saucedo_Jose_Photo.jpg"
     },
@@ -67,6 +74,7 @@ const Board = () => {
       position: "Outreach Coordinator",
       major: "Computer Science",
       year: "Junior",
+      email: "",
       linkedin: "https://www.linkedin.com/in/alan-xa24/",
       image: "/images/Alan_Ayala_Photo.jpg"
     },
@@ -75,6 +83,7 @@ const Board = () => {
       position: "Webmaster",
       major: "Computer Science Engineering",
       year: "Junior",
+      email: "",
       linkedin: "https://www.linkedin.com/in/ulisesjc/",
       image: "/images/Cortez_Ulises_Photo.jpeg"
     },
@@ -83,6 +92,7 @@ const Board = () => {
       position: "Professional Development",
       major: "Chemical Engineering",
       year: "Senior",
+      email: "",
       linkedin: "https://www.linkedin.com/in/nallely-saucedo-099977251/",
       image: "/images/Saucedo_Nallely_Photo.jpg"
     },
@@ -91,6 +101,7 @@ const Board = () => {
       position: "Engagement Coordinator",
       major: "Chemical Engineering",
       year: "Senior",
+      email: "",
       linkedin: "https://www.linkedin.com/in/ariquezadacaro/",
       image: "/images/Ari_sPic.jpeg"
     },
@@ -99,6 +110,7 @@ const Board = () => {
       position: "Historian",
       major: "Mechanical Engineering",
       year: "Sophomore",
+      email: "",
       linkedin: "#",
       image: "/images/Sanchez_Kevin_Photo.jpg"
     }
@@ -152,7 +164,18 @@ const Board = () => {
                   
                   <div className="flex items-center justify-center text-sm text-muted-foreground">
                   </div>
+                  
+                  <CardDescription className="text-center leading-relaxed">
+                    {member.bio}
+                  </CardDescription>
+                  
                   <div className="flex justify-center space-x-4 pt-4 border-t border-border">
+                    <a 
+                      href={`mailto:${member.email}`}
+                      className="p-2 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors group"
+                    >
+                      <Mail className="h-4 w-4 text-accent group-hover:text-accent-glow" />
+                    </a>
                     <a 
                       href={member.linkedin}
                       className="p-2 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors group"
