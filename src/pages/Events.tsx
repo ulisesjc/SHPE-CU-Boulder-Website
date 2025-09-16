@@ -118,7 +118,7 @@ const Events = () => {
             <CardContent className="space-y-6">
               {/* Instagram Post 1 */}
               <iframe
-                src="https://www.instagram.com/p/C9kxxxxxx/embed"
+                src="https://www.instagram.com/p/DOmo1NYDaEc/"
                 width="100%"
                 height="500"
                 frameBorder="0"
@@ -130,7 +130,7 @@ const Events = () => {
 
               {/* Instagram Post 2 */}
               <iframe
-                src="https://www.instagram.com/p/C8jyyyyyy/embed"
+                src="https://www.instagram.com/p/DOEb3TpDg57/"
                 width="100%"
                 height="500"
                 frameBorder="0"
