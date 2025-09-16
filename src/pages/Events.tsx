@@ -142,9 +142,6 @@ const Events = () => {
                   Submit Event Proposal
                 </Button>
                 <Button variant="outline" className="w-full">
-                  Export Calendar
-                </Button>
-                <Button variant="outline" className="w-full">
                   Subscribe to Updates
                 </Button>
               </CardContent>

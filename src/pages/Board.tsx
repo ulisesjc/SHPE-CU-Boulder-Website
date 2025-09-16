@@ -136,7 +136,7 @@ const Board = () => {
             {boardMembers.map((member, index) => (
               <Card 
                 key={member.name} 
-                className="group hover:shadow-primary hover:bg-accent/10 transition-all duration-300 hover:-translate-y-2 animate-fade-in"
+                className="group transition-transform duration-200 hover:-translate-y-1 hover:scale-105"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader className="text-center pb-4">
