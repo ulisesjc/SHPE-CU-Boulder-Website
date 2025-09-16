@@ -153,9 +153,15 @@ const Events = () => {
                 <p className="text-sm mb-4 opacity-90">
                   Follow our social media for real-time updates and announcements
                 </p>
+                <a 
+                  href="https://www.instagram.com/cuboulder_shpemaes/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
                 <Button variant="secondary" size="sm">
                   Follow Us
                 </Button>
+              </a>
               </CardContent>
             </Card>
           </div>
