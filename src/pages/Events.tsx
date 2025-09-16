@@ -110,6 +110,7 @@ const Events = () => {
           </div>
 
           {/* Upcoming Events Sidebar */}
+          <div className="space-y-6">
           <Card className="animate-fade-in">
             <CardHeader>
               <CardTitle>Upcoming Events</CardTitle>
@@ -117,7 +118,7 @@ const Events = () => {
             <CardContent className="space-y-6">
               {/* Instagram Post 1 */}
               <iframe
-                src="https://www.instagram.com/p/DOmo1NYDaEc/"
+                src="https://www.instagram.com/p/C9kxxxxxx/embed"
                 width="100%"
                 height="500"
                 frameBorder="0"
@@ -129,7 +130,7 @@ const Events = () => {
 
               {/* Instagram Post 2 */}
               <iframe
-                src="https://www.instagram.com/p/DOEb3TpDg57/"
+                src="https://www.instagram.com/p/C8jyyyyyy/embed"
                 width="100%"
                 height="500"
                 frameBorder="0"
