@@ -61,25 +61,18 @@ const Footer = () => {
                 <span className="text-primary-foreground/80 text-sm">shpe@university.edu</span>
               </li>
               <li className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-accent" />
-                <span className="text-primary-foreground/80 text-sm">(555) 123-4567</span>
-              </li>
-              <li className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-accent" />
-                <span className="text-primary-foreground/80 text-sm">Engineering Building, Room 101</span>
+                <span className="text-primary-foreground/80 text-sm">Campos Student Center, Engineering Center</span>
               </li>
             </ul>
 
             {/* Social Media */}
             <div className="flex space-x-4 mt-6">
-              <a href="#" className="text-primary-foreground/80 hover:text-accent transition-colors">
+              <a href="https://www.instagram.com/cuboulder_shpemaes/" className="text-primary-foreground/80 hover:text-accent transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="text-primary-foreground/80 hover:text-accent transition-colors">
+              <a href="https://www.linkedin.com/company/shpe-maes-university-of-colorado-boulder/" className="text-primary-foreground/80 hover:text-accent transition-colors">
                 <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-primary-foreground/80 hover:text-accent transition-colors">
-                <Facebook className="h-5 w-5" />
               </a>
             </div>
           </div>

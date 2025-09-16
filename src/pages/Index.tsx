@@ -60,7 +60,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-primary/20"></div>
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-accent mb-6 animate-light-up text-center">
-            Welcome to CU SHPE!!
+            Society of Hispanic Professional Engineers
           </h1>
           <p className="text-xl md:text-2xl text-primary-foreground/90 animate-fade-in max-w-3xl mx-auto text-center">
             University of Colorado Boulder
