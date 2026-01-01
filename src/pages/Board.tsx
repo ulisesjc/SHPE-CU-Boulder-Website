@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Mail, Linkedin, GraduationCap, MapPin } from "lucide-react";
+import { Mail, Linkedin, GraduationCap } from "lucide-react";
 
 const Board = () => {
   const boardMembers = [

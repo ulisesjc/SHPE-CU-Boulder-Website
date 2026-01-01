@@ -114,7 +114,6 @@ const Events = () => {
             </Card>
           </div>
           </div>
-
           {/* Upcoming Events Sidebar */}
           <div className="space-y-6">
           <Card className="animate-fade-in">
