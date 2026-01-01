@@ -113,6 +113,7 @@ const Events = () => {
               </div>
             </Card>
           </div>
+          </div>
 
           {/* Upcoming Events Sidebar */}
           <div className="space-y-6">
