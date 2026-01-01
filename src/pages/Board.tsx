@@ -162,26 +162,26 @@ const Board = () => {
                     <Badge variant="outline">{member.year}</Badge>
                   </div>
                   
-                  <div className="flex items-center justify-center text-sm text-muted-foreground">
-                  </div>
-                  
-                  <CardDescription className="text-center leading-relaxed">
-                    {member.bio}
-                  </CardDescription>
                   
                   <div className="flex justify-center space-x-4 pt-4 border-t border-border">
-                    <a 
-                      href={`mailto:${member.email}`}
-                      className="p-2 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors group"
-                    >
-                      <Mail className="h-4 w-4 text-accent group-hover:text-accent-glow" />
-                    </a>
-                    <a 
-                      href={member.linkedin}
-                      className="p-2 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors group"
-                    >
-                      <Linkedin className="h-4 w-4 text-accent group-hover:text-accent-glow" />
-                    </a>
+                    {member.email && (
+                      <a 
+                        href={`mailto:${member.email}`}
+                        className="p-2 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors group"
+                      >
+                        <Mail className="h-4 w-4 text-accent group-hover:text-accent-glow" />
+                      </a>
+                    )}
+                    {member.linkedin && member.linkedin !== "#" && (
+                      <a 
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors group"
+                      >
+                        <Linkedin className="h-4 w-4 text-accent group-hover:text-accent-glow" />
+                      </a>
+                    )}
                   </div>
                 </CardContent>
               </Card>

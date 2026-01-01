@@ -1,19 +1,28 @@
 import { useState } from "react";
-import { Calendar, momentLocalizer } from "react-big-calendar";
+import { Calendar, momentLocalizer, View } from "react-big-calendar";
 import moment from "moment";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Calendar as CalendarIcon, Clock, MapPin } from "lucide-react";
+import { Calendar as CalendarIcon } from "lucide-react";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 
 const localizer = momentLocalizer(moment);
 
-const Events = () => {
-  const [view, setView] = useState<'month' | 'agenda'>('month');
+interface CalendarEvent {
+  id: number;
+  title: string;
+  start: Date;
+  end: Date;
+  location?: string;
+  description?: string;
+}
 
-  const events = [
+const Events = () => {
+  const [view, setView] = useState<View>('month');
+
+  const events: CalendarEvent[] = [
     {
       id: 1,
       title: "General Meeting",
@@ -48,10 +57,6 @@ const Events = () => {
     }
   ];
 
-  const upcomingEvents = events
-    .filter(event => event.start > new Date())
-    .sort((a, b) => a.start.getTime() - b.start.getTime())
-    .slice(0, 3);
 
   return (
     <div className="min-h-screen bg-background">
@@ -81,14 +86,14 @@ const Events = () => {
                   <Button
                     variant={view === 'month' ? 'default' : 'outline'}
                     size="sm"
-                    onClick={() => setView('month')}
+                    onClick={() => setView('month' as View)}
                   >
                     Month
                   </Button>
                   <Button
                     variant={view === 'agenda' ? 'default' : 'outline'}
                     size="sm"
-                    onClick={() => setView('agenda')}
+                    onClick={() => setView('agenda' as View)}
                   >
                     Agenda
                   </Button>
@@ -174,11 +179,10 @@ const Events = () => {
             </CardContent>
           </Card>
         </div>
-    </div>
-      </main >
+      </main>
 
-  <Footer />
-    </div >
+      <Footer />
+    </div>
   );
 };
 
