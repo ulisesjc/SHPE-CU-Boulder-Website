@@ -144,6 +144,10 @@ const Board = () => {
                     <img
                       src={member.image}
                       alt={member.name}
+                      loading="lazy"
+                      decoding="async"
+                      width="160"
+                      height="160"
                       className="w-40 h-40 rounded-full object-cover border-4 border-accent/20 group-hover:border-accent/40 transition-colors"
                     />
                     <div className="absolute -bottom-3 -right-3 w-10 h-10 bg-accent rounded-full flex items-center justify-center">

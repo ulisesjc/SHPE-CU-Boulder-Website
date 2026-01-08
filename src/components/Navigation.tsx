@@ -58,6 +58,10 @@ const Navigation = () => {
               <img 
                 src={shpeLogo} 
                 alt="SHPE Logo" 
+                loading="eager"
+                decoding="async"
+                width="40"
+                height="40"
                 className="h-10 w-auto object-contain"
               />
               {/* Divider */}
@@ -66,6 +70,10 @@ const Navigation = () => {
               <img 
                 src={cuBuffLogo} 
                 alt="CU Boulder Logo" 
+                loading="eager"
+                decoding="async"
+                width="40"
+                height="40"
                 className="h-10 w-auto object-contain"
               />
             </div>

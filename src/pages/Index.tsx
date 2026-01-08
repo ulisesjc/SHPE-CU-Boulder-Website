@@ -4,7 +4,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Calendar, Users, Award, BookOpen, Briefcase, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
-import myPhoto from "@/assets/mainpage.jpeg";
+import myPhoto from "@/assets/mainpage.jpg";
 
 const Index = () => {
 
