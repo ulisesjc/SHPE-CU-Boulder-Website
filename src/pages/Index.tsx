@@ -2,11 +2,41 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Calendar, Users, Award, BookOpen, Briefcase, Heart } from "lucide-react";
+import { Calendar, Users, Award, ArrowRight, BookOpen, Briefcase, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
-import myPhoto from "@/assets/mainpage.jpg";
+import { useState, useEffect } from "react";
+import myPhoto from "@/assets/mainpage.jpeg";
 
 const Index = () => {
+  const [scrollY, setScrollY] = useState(0);
+  const [backgroundOpacity, setBackgroundOpacity] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setScrollY(currentScrollY);
+      
+      // Calculate transition point (halfway through the page)
+      const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollProgress = currentScrollY / documentHeight;
+      
+      // Start transition at 40% scroll, complete at 60%
+      const transitionStart = 0.4;
+      const transitionEnd = 0.6;
+      
+      if (scrollProgress <= transitionStart) {
+        setBackgroundOpacity(0);
+      } else if (scrollProgress >= transitionEnd) {
+        setBackgroundOpacity(1);
+      } else {
+        const progress = (scrollProgress - transitionStart) / (transitionEnd - transitionStart);
+        setBackgroundOpacity(progress);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <div className="min-h-screen bg-background relative">
@@ -124,22 +154,20 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Link to="/events">
-              <Card className="group hover:shadow-primary transition-all duration-300 cursor-pointer h-full">
-                <CardHeader>
-                  <Calendar className="h-12 w-12 text-accent mb-4 group-hover:animate-glow" />
-                  <CardTitle className="text-primary">Upcoming Events</CardTitle>
-                  <CardDescription>
-                    Join our workshops, networking events, and professional development sessions.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground">
-                    View Events
-                  </Button>
-                </CardContent>
-              </Card>
-            </Link>
+            <Card className="group hover:shadow-primary transition-all duration-300 cursor-pointer">
+              <CardHeader>
+                <Calendar className="h-12 w-12 text-accent mb-4 group-hover:animate-glow" />
+                <CardTitle className="text-primary">Upcoming Events</CardTitle>
+                <CardDescription>
+                  Join our workshops, networking events, and professional development sessions.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground">
+                  View Events
+                </Button>
+              </CardContent>
+            </Card>
 
             <Link to="/board">
               <Card className="group hover:shadow-primary transition-all duration-300 cursor-pointer h-full">

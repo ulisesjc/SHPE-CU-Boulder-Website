@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Mail, Linkedin, GraduationCap } from "lucide-react";
+import { Mail, Linkedin, GraduationCap, MapPin } from "lucide-react";
 
 const Board = () => {
   const boardMembers = [
@@ -144,10 +144,6 @@ const Board = () => {
                     <img
                       src={member.image}
                       alt={member.name}
-                      loading="lazy"
-                      decoding="async"
-                      width="160"
-                      height="160"
                       className="w-40 h-40 rounded-full object-cover border-4 border-accent/20 group-hover:border-accent/40 transition-colors"
                     />
                     <div className="absolute -bottom-3 -right-3 w-10 h-10 bg-accent rounded-full flex items-center justify-center">
@@ -166,26 +162,26 @@ const Board = () => {
                     <Badge variant="outline">{member.year}</Badge>
                   </div>
                   
+                  <div className="flex items-center justify-center text-sm text-muted-foreground">
+                  </div>
+                  
+                  <CardDescription className="text-center leading-relaxed">
+                    {member.bio}
+                  </CardDescription>
                   
                   <div className="flex justify-center space-x-4 pt-4 border-t border-border">
-                    {member.email && (
-                      <a 
-                        href={`mailto:${member.email}`}
-                        className="p-2 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors group"
-                      >
-                        <Mail className="h-4 w-4 text-accent group-hover:text-accent-glow" />
-                      </a>
-                    )}
-                    {member.linkedin && member.linkedin !== "#" && (
-                      <a 
-                        href={member.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors group"
-                      >
-                        <Linkedin className="h-4 w-4 text-accent group-hover:text-accent-glow" />
-                      </a>
-                    )}
+                    <a 
+                      href={`mailto:${member.email}`}
+                      className="p-2 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors group"
+                    >
+                      <Mail className="h-4 w-4 text-accent group-hover:text-accent-glow" />
+                    </a>
+                    <a 
+                      href={member.linkedin}
+                      className="p-2 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors group"
+                    >
+                      <Linkedin className="h-4 w-4 text-accent group-hover:text-accent-glow" />
+                    </a>
                   </div>
                 </CardContent>
               </Card>
