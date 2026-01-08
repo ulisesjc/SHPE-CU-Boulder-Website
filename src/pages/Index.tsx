@@ -1,56 +1,18 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Calendar, Users, Award, ArrowRight, BookOpen, Briefcase, Heart } from "lucide-react";
+import { Calendar, Users, Award, BookOpen, Briefcase, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState, useEffect, useRef } from "react";
 import myPhoto from "@/assets/mainpage.jpg";
 
 const Index = () => {
-  const [backgroundOpacity, setBackgroundOpacity] = useState(0);
-  const rafRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (rafRef.current) {
-        cancelAnimationFrame(rafRef.current);
-      }
-
-      
-      rafRef.current = requestAnimationFrame(() => {
-        const currentScrollY = window.scrollY;
-        
-        const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollProgress = currentScrollY / documentHeight;
-        
-        const transitionStart = 0.4;
-        const transitionEnd = 0.6;
-        
-        let newOpacity;
-        if (scrollProgress <= transitionStart) {
-          newOpacity = 0;
-        } else if (scrollProgress >= transitionEnd) {
-          newOpacity = 1;
-        } else {
-          newOpacity = (scrollProgress - transitionStart) / (transitionEnd - transitionStart);
-        }
-        
-        setBackgroundOpacity(prev => 
-          Math.abs(prev - newOpacity) > 0.01 ? newOpacity : prev
-        );
-      });
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      if (rafRef.current) {
-        cancelAnimationFrame(rafRef.current);
-      }
-    };
-  }, []);
-
   return (
     <div className="min-h-screen bg-background relative">
       {/* Fixed Background Image */}
@@ -65,17 +27,17 @@ const Index = () => {
       </div>
       
       {/* Content */}
-      <div className="relative z-10">
+      <div className="relative z-10 pt-16">
       <Navigation />
       
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center justify-center">
-        <div className="absolute inset-0 bg-primary/20"></div>
+        <div className="absolute inset-0 bg-primary/20" />
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-        <h1 className="text-[clamp(2.5rem,6vw,5rem)] leading-tight font-bold text-accent mb-6 animate-light-up text-center">
-          Society of Hispanic Professional Engineers
-        </h1>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 animate-fade-in max-w-3xl mx-auto text-center">
+          <h1 className="text-[clamp(2.5rem,6vw,5rem)] leading-tight font-bold text-accent mb-6">
+            Society of Hispanic Professional Engineers
+          </h1>
+          <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto text-center">
             University of Colorado Boulder
           </p>
         </div>
