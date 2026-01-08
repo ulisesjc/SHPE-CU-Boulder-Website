@@ -4,38 +4,51 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Calendar, Users, Award, ArrowRight, BookOpen, Briefcase, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-import myPhoto from "@/assets/mainpage.jpeg";
+import { useState, useEffect, useRef } from "react";
+import myPhoto from "@/assets/mainpage.jpg";
 
 const Index = () => {
-  const [scrollY, setScrollY] = useState(0);
   const [backgroundOpacity, setBackgroundOpacity] = useState(0);
+  const rafRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setScrollY(currentScrollY);
-      
-      // Calculate transition point (halfway through the page)
-      const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollProgress = currentScrollY / documentHeight;
-      
-      // Start transition at 40% scroll, complete at 60%
-      const transitionStart = 0.4;
-      const transitionEnd = 0.6;
-      
-      if (scrollProgress <= transitionStart) {
-        setBackgroundOpacity(0);
-      } else if (scrollProgress >= transitionEnd) {
-        setBackgroundOpacity(1);
-      } else {
-        const progress = (scrollProgress - transitionStart) / (transitionEnd - transitionStart);
-        setBackgroundOpacity(progress);
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
       }
+
+      
+      rafRef.current = requestAnimationFrame(() => {
+        const currentScrollY = window.scrollY;
+        
+        const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollProgress = currentScrollY / documentHeight;
+        
+        const transitionStart = 0.4;
+        const transitionEnd = 0.6;
+        
+        let newOpacity;
+        if (scrollProgress <= transitionStart) {
+          newOpacity = 0;
+        } else if (scrollProgress >= transitionEnd) {
+          newOpacity = 1;
+        } else {
+          newOpacity = (scrollProgress - transitionStart) / (transitionEnd - transitionStart);
+        }
+        
+        setBackgroundOpacity(prev => 
+          Math.abs(prev - newOpacity) > 0.01 ? newOpacity : prev
+        );
+      });
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
+      }
+    };
   }, []);
 
   return (
