@@ -5,7 +5,7 @@ import { Target, Eye, Users, Award, BookOpen, Lightbulb } from "lucide-react";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen" style={{ backgroundColor: '#faf8f3' }}>
       <Navigation />
       
       {/* Hero Section */}
@@ -21,123 +21,67 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20">
+      <section className="py-20" style={{ backgroundColor: '#faf8f3' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <Card className="group hover:shadow-primary transition-all duration-300">
-              <CardHeader>
-                <Target className="h-12 w-12 text-accent mb-4 group-hover:animate-glow" />
-                <CardTitle className="text-2xl text-primary">Our Mission</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
-                  SHPE changes lives by empowering the Hispanic community to realize its fullest 
-                  potential and to impact the world through STEM awareness, access, support and 
-                  professional development. We are committed to increasing the number of Hispanic 
-                  engineers by providing motivation, support, and professional development 
-                  opportunities to our members.
-                </p>
-              </CardContent>
-            </Card>
+          <div className="space-y-16">
+            {/* Mission Card with Image */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="order-2 lg:order-1">
+                <img 
+                  src="/images/board2024.jpeg" 
+                  alt="SHPE Mission" 
+                  className="w-full h-auto rounded-lg shadow-lg object-cover"
+                  style={{ maxHeight: '400px' }}
+                />
+              </div>
+              <Card className="group hover:shadow-primary transition-all duration-300 order-1 lg:order-2">
+                <CardHeader>
+                  <Target className="h-12 w-12 text-accent mb-4 group-hover:animate-glow" />
+                  <CardTitle className="text-2xl text-primary">Our Mission</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground leading-relaxed">
+                    SHPE changes lives by empowering the Hispanic community to realize its fullest 
+                    potential and to impact the world through STEM awareness, access, support and 
+                    professional development. We are committed to increasing the number of Hispanic 
+                    engineers by providing motivation, support, and professional development 
+                    opportunities to our members.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
 
-            <Card className="group hover:shadow-primary transition-all duration-300">
-              <CardHeader>
-                <Eye className="h-12 w-12 text-accent mb-4 group-hover:animate-glow" />
-                <CardTitle className="text-2xl text-primary">Our Vision</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
-                  A world where Hispanics are highly valued and influential as the leading 
-                  innovators, scientists, mathematicians and engineers. We envision a future 
-                  where every Hispanic student has access to opportunities in STEM fields and 
-                  the support system needed to achieve their dreams in engineering and technology.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Chapter History */}
-      <section className="py-20 bg-subtle-gradient">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">Our Story</h2>
-            <p className="text-lg text-muted-foreground">
-              The journey of our SHPE chapter and its impact on students
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            <Card className="animate-fade-in">
-              <CardContent className="p-8">
-                <div className="flex items-start space-x-4">
-                  <div className="w-4 h-4 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-primary mb-2">2015 - Chapter Founded</h3>
-                    <p className="text-muted-foreground">
-                      Our SHPE chapter was established by a group of passionate Hispanic engineering 
-                      students who recognized the need for representation and support in STEM fields. 
-                      Starting with just 15 members, we set out to create a community of excellence.
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="animate-fade-in">
-              <CardContent className="p-8">
-                <div className="flex items-start space-x-4">
-                  <div className="w-4 h-4 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-primary mb-2">2018 - First National Conference</h3>
-                    <p className="text-muted-foreground">
-                      Our chapter sent its first delegation to the SHPE National Convention, where 
-                      members participated in career fairs, technical sessions, and networking events. 
-                      This marked a significant milestone in our professional development journey.
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="animate-fade-in">
-              <CardContent className="p-8">
-                <div className="flex items-start space-x-4">
-                  <div className="w-4 h-4 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-primary mb-2">2020 - Community Outreach Launch</h3>
-                    <p className="text-muted-foreground">
-                      We launched our K-12 outreach program, visiting local schools to inspire 
-                      young Hispanic students to pursue STEM careers. Despite challenges from 
-                      the pandemic, we adapted with virtual programs and continued our mission.
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="animate-fade-in">
-              <CardContent className="p-8">
-                <div className="flex items-start space-x-4">
-                  <div className="w-4 h-4 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-primary mb-2">2024 - 150+ Strong</h3>
-                    <p className="text-muted-foreground">
-                      Today, our chapter has grown to over 150 active members across all engineering 
-                      disciplines. We've established partnerships with major companies and have helped 
-                      hundreds of students secure internships and full-time positions.
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            {/* Vision Card with Image */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <Card className="group hover:shadow-primary transition-all duration-300">
+                <CardHeader>
+                  <Eye className="h-12 w-12 text-accent mb-4 group-hover:animate-glow" />
+                  <CardTitle className="text-2xl text-primary">Our Vision</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground leading-relaxed">
+                    A world where Hispanics are highly valued and influential as the leading 
+                    innovators, scientists, mathematicians and engineers. We envision a future 
+                    where every Hispanic student has access to opportunities in STEM fields and 
+                    the support system needed to achieve their dreams in engineering and technology.
+                  </p>
+                </CardContent>
+              </Card>
+              <div>
+                <img 
+                  src="/images/conference2025.jpeg" 
+                  alt="SHPE Vision" 
+                  className="w-full h-auto rounded-lg shadow-lg object-cover"
+                  style={{ maxHeight: '400px' }}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Values */}
-      <section className="py-20">
+      <section className="py-20" style={{ backgroundColor: '#faf8f3' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-primary mb-4">Our Values</h2>
