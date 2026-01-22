@@ -140,6 +140,10 @@
   .animate-glow {
     animation: glow 2s ease-in-out infinite alternate;
   }
+
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+  }
 }
 
 @keyframes light-up {
@@ -200,5 +204,14 @@
       0 0 40px hsl(var(--accent) / 0.6),
       0 0 60px hsl(var(--accent) / 0.4),
       0 0 80px hsl(var(--accent) / 0.2);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }

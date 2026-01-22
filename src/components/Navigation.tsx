@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, FileText } from "lucide-react";
 const shpeLogo = "/lovable-uploads/a934ef03-39ab-48d9-8377-7b2c8eefd8e2.png";
 const cuBuffLogo = "/lovable-uploads/b2fe01b9-d075-4a21-8af7-219fededa41a.png";
 
@@ -89,6 +89,15 @@ const Navigation = () => {
                 )}
               </Link>
             ))}
+            <a
+              href="/corporate-packet.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            >
+              <FileText className="h-4 w-4" />
+              Corporate Packet
+            </a>
             <Button variant="default" className="bg-accent hover:bg-accent-glow text-accent-foreground">
               Join SHPE
             </Button>
@@ -124,6 +133,16 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
+              <a
+                href="/corporate-packet.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-3 py-2 rounded-md text-base font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <FileText className="h-4 w-4" />
+                Corporate Packet
+              </a>
               <div className="pt-2">
                 <Button className="w-full bg-accent hover:bg-accent-glow text-accent-foreground">
                   Join SHPE

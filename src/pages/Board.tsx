@@ -103,7 +103,7 @@ const Board = () => {
       year: "Senior",
       email: "",
       linkedin: "https://www.linkedin.com/in/ariquezadacaro/",
-      image: "/images/Ari_sPic.jpeg"
+      image: "/images/Ari_sPic.jpg"
     },
     {
       name: "Isai Marcial",
