@@ -42,12 +42,12 @@ const Events = () => {
 
   // Google Calendar embed URL - Replace with your actual Google Calendar public URL
   // To get your calendar URL: Google Calendar > Settings > Integrate calendar > Copy the iframe src
-  const googleCalendarUrl = "https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID%40group.calendar.google.com&ctz=America%2FDenver";
+  const googleCalendarUrl = "https://calendar.google.com/calendar/embed?src=545596a6a70f9b818f8dc47f93ef33138ff5a9b6334a0381ac03352755dc3dd6%40group.calendar.google.com&ctz=America%2FDenver";
 
   // Instagram post IDs - Replace with your actual Instagram post IDs
   // Format: Extract the post ID from the Instagram URL (e.g., from https://www.instagram.com/p/DOEb3TpDg57/, the ID is DOEb3TpDg57)
   const instagramPosts = [
-    "DTa66l9CQ2E", // Replace with actual post IDs
+    "DUb7P2fDeyy", // Replace with actual post IDs
     // Add more post IDs as needed
   ];
 
@@ -62,7 +62,7 @@ const Events = () => {
             SHPE Events
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Join us for professional development, networking, and community engagement opportunities
+            Join us for professional development, networking, and career opportunities. Every Wednesday at 6:00 PM in the Campos Student Center.
           </p>
         </div>
 
@@ -137,19 +137,6 @@ const Events = () => {
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle>Quick Actions</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <Button className="w-full bg-accent hover:bg-accent-glow text-accent-foreground">
-                  Submit Event Proposal
-                </Button>
-                <Button variant="outline" className="w-full">
-                  Subscribe to Updates
-                </Button>
-              </CardContent>
-            </Card>
 
             <Card className="bg-hero-gradient text-primary-foreground">
               <CardContent className="p-6 text-center">

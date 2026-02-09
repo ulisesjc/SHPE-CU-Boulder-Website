@@ -122,7 +122,7 @@ const Index = () => {
             <CardContent>
               <div className="h-96 md:h-[600px] rounded-md overflow-hidden border border-border">
                 <iframe
-                  src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID%40group.calendar.google.com&ctz=America%2FDenver"
+                  src="https://calendar.google.com/calendar/embed?src=545596a6a70f9b818f8dc47f93ef33138ff5a9b6334a0381ac03352755dc3dd6%40group.calendar.google.com&ctz=America%2FDenver"
                   width="100%"
                   height="100%"
                   frameBorder="0"

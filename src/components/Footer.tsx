@@ -9,9 +9,6 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-accent-foreground font-bold text-lg">S</span>
-              </div>
               <div className="flex flex-col">
                 <span className="font-bold text-lg leading-none">SHPE</span>
                 <span className="text-sm text-primary-foreground/80 leading-none">
@@ -40,11 +37,6 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-primary-foreground/80 hover:text-accent transition-colors">
-                  Contact
-                </Link>
-              </li>
-              <li>
                 <a href="#" className="text-primary-foreground/80 hover:text-accent transition-colors">
                   Events
                 </a>
@@ -58,7 +50,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-accent" />
-                <span className="text-primary-foreground/80 text-sm">shpe@university.edu</span>
+                <span className="text-primary-foreground/80 text-sm">president.shpemaescub@gmail.com</span>
               </li>
               <li className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-accent" />
@@ -80,7 +72,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-primary-foreground/60 text-sm">
-            © 2025 SHPE CU Boulder. All rights reserved.
+            © 2026 SHPE CU Boulder. All rights reserved.
           </p>
         </div>
       </div>
