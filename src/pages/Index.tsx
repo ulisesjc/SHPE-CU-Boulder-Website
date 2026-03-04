@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useState } from "react";
 import {
   Card,
   CardContent,
@@ -12,7 +12,36 @@ import { Calendar as CalendarIcon, ExternalLink } from "lucide-react";
 import { BookOpen, Briefcase, Heart } from "lucide-react";
 import myPhoto from "/images/MainConf2024.jpeg";
 
+const galleryImages = [
+  {
+    src: "/images/Philly2.png",
+    alt: "SHPE members at a conference",
+  },
+  {
+    src: "/images/Philly4.png",
+    alt: "SHPE workshop with students",
+  },
+  {
+    src: "/images/PhillyFlag.jpeg",
+    alt: "SHPE social event",
+  },
+];
+
 const Index = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const showPreviousImage = () => {
+    setCurrentImageIndex((prev) =>
+      prev === 0 ? galleryImages.length - 1 : prev - 1
+    );
+  };
+
+  const showNextImage = () => {
+    setCurrentImageIndex((prev) =>
+      prev === galleryImages.length - 1 ? 0 : prev + 1
+    );
+  };
+
   return (
     <div className="min-h-screen bg-background relative">
       {/* Fixed Background Image */}
@@ -90,6 +119,68 @@ const Index = () => {
                 </CardDescription>
               </CardHeader>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Photo Gallery Section */}
+      <section className="py-16 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-3xl font-bold text-primary">
+              Chapter Moments
+            </h2>
+            <div className="flex gap-2">
+              <button
+                type="button"
+                onClick={showPreviousImage}
+                className="inline-flex items-center justify-center rounded-full border border-border bg-background px-3 py-1 text-sm font-medium text-primary hover:bg-muted transition-colors"
+              >
+                Prev
+              </button>
+              <button
+                type="button"
+                onClick={showNextImage}
+                className="inline-flex items-center justify-center rounded-full border border-border bg-background px-3 py-1 text-sm font-medium text-primary hover:bg-muted transition-colors"
+              >
+                Next
+              </button>
+            </div>
+          </div>
+
+          <div className="relative overflow-hidden rounded-lg border border-border bg-muted/40">
+            <div
+              className="flex transition-transform duration-500 ease-out"
+              style={{
+                transform: `translateX(-${currentImageIndex * 100}%)`,
+              }}
+            >
+              {galleryImages.map((image) => (
+                <div key={image.src} className="min-w-full">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="h-72 w-full object-cover md:h-96"
+                  />
+                </div>
+              ))}
+            </div>
+
+            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+              {galleryImages.map((image, index) => (
+                <button
+                  key={image.src}
+                  type="button"
+                  onClick={() => setCurrentImageIndex(index)}
+                  className={`h-2.5 w-2.5 rounded-full border border-border transition-colors ${
+                    index === currentImageIndex
+                      ? "bg-accent"
+                      : "bg-background/70 hover:bg-muted"
+                  }`}
+                  aria-label={`Go to image ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
