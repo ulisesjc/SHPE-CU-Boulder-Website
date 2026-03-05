@@ -47,7 +47,7 @@ const Events = () => {
   // Instagram post IDs - Replace with your actual Instagram post IDs
   // Format: Extract the post ID from the Instagram URL (e.g., from https://www.instagram.com/p/DOEb3TpDg57/, the ID is DOEb3TpDg57)
   const instagramPosts = [
-    "DUb7P2fDeyy", // Replace with actual post IDs
+    "DT3qdH1jc0Y", // Replace with actual post IDs
     // Add more post IDs as needed
   ];
 
@@ -62,7 +62,7 @@ const Events = () => {
             SHPE Events
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Join us for professional development, networking, and career opportunities. Every Wednesday at 6:00 PM in the Campos Student Center.
+            Join us for professional development, networking, and career opportunities. Every other Wednesday at 6:00 PM in the Campos Student Center.
           </p>
         </div>
 
