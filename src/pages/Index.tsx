@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Card,
   CardContent,
@@ -8,8 +8,6 @@ import {
 } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Calendar as CalendarIcon, ExternalLink } from "lucide-react";
-import { BookOpen, Briefcase, Heart } from "lucide-react";
 import myPhoto from "/images/MainConf2024.jpeg";
 
 const galleryImages = [
@@ -27,8 +25,16 @@ const galleryImages = [
   },
 ];
 
+// Add or replace with your upcoming event photos (paths under public/images/)
+const upcomingEventsImages = [
+  { src: "/images/ExecDeadline.png", alt: "Upcoming event" },
+  { src: "/images/ExecDeadline.png", alt: "Upcoming event" },
+  { src: "/images/ExecDeadline.png", alt: "Upcoming event" },
+];
+
 const Index = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentEventsIndex, setCurrentEventsIndex] = useState(0);
 
   const showPreviousImage = () => {
     setCurrentImageIndex((prev) =>
@@ -41,6 +47,27 @@ const Index = () => {
       prev === galleryImages.length - 1 ? 0 : prev + 1
     );
   };
+
+  const showPreviousEvent = () => {
+    setCurrentEventsIndex((prev) =>
+      prev === 0 ? upcomingEventsImages.length - 1 : prev - 1
+    );
+  };
+
+  const showNextEvent = () => {
+    setCurrentEventsIndex((prev) =>
+      prev === upcomingEventsImages.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) =>
+        prev === galleryImages.length - 1 ? 0 : prev + 1
+      );
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="min-h-screen bg-background relative">
@@ -67,7 +94,7 @@ const Index = () => {
             Society of Hispanic Professional Engineers
           </h1>
           <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto text-center">
-            University of Colorado Boulder
+            University of Colorado Boulder Chapter
           </p>
         </div>
       </section>
@@ -86,9 +113,6 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="group hover:shadow-primary transition-all duration-300 hover:-translate-y-2">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
-                  <BookOpen className="h-8 w-8 text-accent" />
-                </div>
                 <CardTitle className="text-primary">Awareness</CardTitle>
                 <CardDescription>
                   Bringing Hispanic/Latin American culture to campus, mentoring students in high school, outreach and volunteering in STEM
@@ -98,9 +122,6 @@ const Index = () => {
 
             <Card className="group hover:shadow-primary transition-all duration-300 hover:-translate-y-2">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
-                  <Briefcase className="h-8 w-8 text-accent" />
-                </div>
                 <CardTitle className="text-primary">Development</CardTitle>
                 <CardDescription>
                   Workshops on personal finance, networking, resume building, activism, and socially-bonded growth
@@ -110,9 +131,6 @@ const Index = () => {
 
             <Card className="group hover:shadow-primary transition-all duration-300 hover:-translate-y-2">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
-                  <Heart className="h-8 w-8 text-accent" />
-                </div>
                 <CardTitle className="text-primary">Support</CardTitle>
                 <CardDescription>
                   The largest network of Hispanic students on campus, community-bonding, academic mentorship, social community, personal support
@@ -123,63 +141,109 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Photo Gallery Section */}
+      {/* Photo Gallery Section — split: Chapter Moments (left) + Upcoming Events (right) */}
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-3xl font-bold text-primary">
-              Chapter Moments
-            </h2>
-            <div className="flex gap-2">
-              <button
-                type="button"
-                onClick={showPreviousImage}
-                className="inline-flex items-center justify-center rounded-full border border-border bg-background px-3 py-1 text-sm font-medium text-primary hover:bg-muted transition-colors"
-              >
-                Prev
-              </button>
-              <button
-                type="button"
-                onClick={showNextImage}
-                className="inline-flex items-center justify-center rounded-full border border-border bg-background px-3 py-1 text-sm font-medium text-primary hover:bg-muted transition-colors"
-              >
-                Next
-              </button>
-            </div>
-          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Left: Chapter Moments */}
+            <div>
+              <h2 className="text-2xl font-bold text-primary mb-6 text-center">
+                Fun Moments
+              </h2>
 
-          <div className="relative overflow-hidden rounded-lg border border-border bg-muted/40">
-            <div
-              className="flex transition-transform duration-500 ease-out"
-              style={{
-                transform: `translateX(-${currentImageIndex * 100}%)`,
-              }}
-            >
-              {galleryImages.map((image) => (
-                <div key={image.src} className="min-w-full">
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="h-72 w-full object-cover md:h-96"
-                  />
+              <div className="relative overflow-hidden rounded-lg border border-border bg-muted/40">
+                <div
+                  className="flex transition-transform duration-500 ease-out"
+                  style={{
+                    transform: `translateX(-${currentImageIndex * 100}%)`,
+                  }}
+                >
+                  {galleryImages.map((image) => (
+                    <div key={image.src} className="min-w-full">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="h-96 w-full object-cover md:h-[28rem]"
+                      />
+                    </div>
+                  ))}
                 </div>
-              ))}
+
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                  {galleryImages.map((image, index) => (
+                    <button
+                      key={image.src}
+                      type="button"
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`h-2.5 w-2.5 rounded-full border border-border transition-colors ${
+                        index === currentImageIndex
+                          ? "bg-accent"
+                          : "bg-background/70 hover:bg-muted"
+                      }`}
+                      aria-label={`Go to image ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
             </div>
 
-            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
-              {galleryImages.map((image, index) => (
+            {/* Right: Upcoming Events */}
+            <div>
+              <h2 className="text-2xl font-bold text-primary mb-6 text-center">
+                Upcoming Events
+              </h2>
+
+              <div className="relative overflow-hidden rounded-lg border border-border bg-muted/40">
                 <button
-                  key={image.src}
                   type="button"
-                  onClick={() => setCurrentImageIndex(index)}
-                  className={`h-2.5 w-2.5 rounded-full border border-border transition-colors ${
-                    index === currentImageIndex
-                      ? "bg-accent"
-                      : "bg-background/70 hover:bg-muted"
-                  }`}
-                  aria-label={`Go to image ${index + 1}`}
-                />
-              ))}
+                  onClick={showPreviousEvent}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 z-10 inline-flex items-center justify-center rounded-full border border-border bg-background/90 px-3 py-2 text-sm font-medium text-primary hover:bg-muted transition-colors"
+                  aria-label="Previous"
+                >
+                  Prev
+                </button>
+                <button
+                  type="button"
+                  onClick={showNextEvent}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 z-10 inline-flex items-center justify-center rounded-full border border-border bg-background/90 px-3 py-2 text-sm font-medium text-primary hover:bg-muted transition-colors"
+                  aria-label="Next"
+                >
+                  Next
+                </button>
+
+                <div
+                  className="flex transition-transform duration-500 ease-out"
+                  style={{
+                    transform: `translateX(-${currentEventsIndex * 100}%)`,
+                  }}
+                >
+                  {upcomingEventsImages.map((image) => (
+                    <div key={image.src} className="min-w-full">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="h-96 w-full object-cover md:h-[28rem]"
+                      />
+                    </div>
+                  ))}
+                </div>
+
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                  {upcomingEventsImages.map((image, index) => (
+                    <button
+                      key={image.src}
+                      type="button"
+                      onClick={() => setCurrentEventsIndex(index)}
+                      className={`h-2.5 w-2.5 rounded-full border border-border transition-colors ${
+                        index === currentEventsIndex
+                          ? "bg-accent"
+                          : "bg-background/70 hover:bg-muted"
+                      }`}
+                      aria-label={`Go to event image ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -189,25 +253,21 @@ const Index = () => {
       <section className="py-20 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-primary-foreground mb-4">Event Calendar</h2>
+            <h2 className="text-4xl font-bold text-primary-foreground mb-4">Google Calendar Events</h2>
             <p className="text-lg text-primary-foreground/80">
-              Stay up to date with our upcoming events and activities
+              Link your calendar for upcoming events!
             </p>
           </div>
           <Card className="bg-background">
             <CardHeader className="flex flex-row items-center justify-between">
-              <CardTitle className="flex items-center gap-2">
-                <CalendarIcon className="h-6 w-6 text-accent" />
-                SHPE Events Calendar
-              </CardTitle>
+              <CardTitle>SHPE Events Calendar</CardTitle>
               <a
                 href="https://calendar.google.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-muted-foreground hover:text-primary flex items-center gap-1"
+                className="text-sm text-muted-foreground hover:text-primary"
               >
                 Open in Google Calendar
-                <ExternalLink className="h-4 w-4" />
               </a>
             </CardHeader>
             <CardContent>

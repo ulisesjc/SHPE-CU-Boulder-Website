@@ -53,7 +53,8 @@ const About = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground leading-relaxed">
-                    From K–12 outreach to campus initiatives, we give back through and uplift our local Hispanic and Latinx community.
+                  Service from our professional chapter is a pillar upon which our academic chapter thrives. 
+                  We always want to make sure to pay this forward! The most prominent service event we host is the Dia De Sciencias. Which aims to introduce students from underrepresented communities into STEM!
                   </p>
                 </CardContent>
               </Card>
@@ -72,7 +73,7 @@ const About = () => {
               <div className="order-2 lg:order-1">
                 <div className="w-full h-[300px] rounded-lg border-2 border-dashed border-accent/40 flex items-center justify-center text-muted-foreground text-sm bg-white/60">
                 <img 
-                  src="/images/conference2025.jpeg"
+                  src="/images/PhillyLove.jpeg"
                   alt="Community Service" 
                   className="w-full h-auto rounded-lg shadow-lg object-cover"
                   style={{ maxHeight: '400px' }}
@@ -85,13 +86,31 @@ const About = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground leading-relaxed">
-                    Above all, SHPE CU Boulder is a supportive space where members find 
-                    belonging, encouragement, and lifelong friendships on their engineering journey.
+                    Above all, the heart of our mission is community. We strive tocreate a supportive space where you can find 
+                    belonging, encouragement, and lifelong friendships as you navigate your engineering journey.
                   </p>
                 </CardContent>
               </Card>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Who We Are — National Organization */}
+      <section className="py-16" style={{ backgroundColor: '#f5e6c8' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
+            We are a chapter of the Society of Hispanic Professional Engineers, the nation&apos;s largest association dedicated to fostering Hispanic leadership in STEM.
+            Today we continue that mission, supporting students, connecting with industry, and giving back through service.
+          </p>
+          <a
+            href="https://shpe.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+          >
+            Visit National SHPE
+          </a>
         </div>
       </section>
 
