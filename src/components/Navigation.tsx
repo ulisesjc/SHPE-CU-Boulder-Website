@@ -33,16 +33,16 @@ const FlatironMountains = () => (
   </svg>
 );
 
+const navItems = [
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
+  { name: "Board", path: "/board" },
+  { name: "Events", path: "/events" },
+];
+
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-
-  const navItems = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Board", path: "/board" },
-    { name: "Events", path: "/events" },
-  ];
 
   const isActive = (path: string) => location.pathname === path;
 

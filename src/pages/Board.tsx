@@ -1,125 +1,125 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Mail, Linkedin, GraduationCap, MapPin } from "lucide-react";
+import { Mail, Linkedin, GraduationCap } from "lucide-react";
+
+const boardMembers = [
+  {
+    name: "Kevin Sanchez",
+    position: "President",
+    major: "Information Science",
+    year: "Senior",
+    email: "",
+    linkedin: "https://www.linkedin.com/in/kevin-sanchez-507564249/",
+    image: "/images/Sanchez_Kevin_Photo.jpg",
+  },
+  {
+    name: "Eduardo Lopez Landeros",
+    position: "Vice President",
+    major: "Aerospace Engineering",
+    year: "Senior",
+    email: "",
+    linkedin: "https://www.linkedin.com/in/eduardolopezl/",
+    image: "/images/tato.jpg",
+  },
+  {
+    name: "Rachel Zamora",
+    position: "Secretary",
+    major: "Biomedical Engineering",
+    year: "Sophomore",
+    email: "",
+    linkedin: "https://www.linkedin.com/in/rachel-m-zamora/",
+    image: "/images/rachel_headshot.jpg",
+  },
+  {
+    name: "Bernadette Weigang",
+    position: "Treasurer",
+    major: "Aerospace Engineering",
+    year: "Senior",
+    email: "",
+    linkedin: "https://www.linkedin.com/in/bernadette-weigang/",
+    image: "/images/bern.jpg",
+  },
+  {
+    name: "Felipe Garza Cancino",
+    position: "Public Relations",
+    major: "Aerospace Engineering",
+    year: "Senior",
+    email: "",
+    linkedin: "https://www.linkedin.com/in/felipegarzacancino/",
+    image: "/images/Garza_Felipe.jpg",
+  },
+  {
+    name: "Fernanda Arias Aguilar",
+    position: "Social Media Coordinator",
+    major: "Architectual Engineering",
+    year: "Junior",
+    email: "",
+    linkedin: "https://www.linkedin.com/in/fernanda-arias-aguilar-894063280/",
+    image: "/images/Fernanda_Photo.jpg",
+  },
+  {
+    name: "Jose Alberto Saucedo",
+    position: "Academic Chair",
+    major: "Mechanical Engineering",
+    year: "Senior",
+    email: "",
+    linkedin: "https://www.linkedin.com/in/jose-a-saucedo/",
+    image: "/images/Saucedo_Jose_Photo.jpg",
+  },
+  {
+    name: "Alan Ayala",
+    position: "Outreach Coordinator",
+    major: "Computer Science",
+    year: "Junior",
+    email: "",
+    linkedin: "https://www.linkedin.com/in/alan-xa24/",
+    image: "/images/Alan_Ayala_Photo.jpg",
+  },
+  {
+    name: "Ulises Cortez",
+    position: "Webmaster",
+    major: "Computer Science Engineering",
+    year: "Junior",
+    email: "",
+    linkedin: "https://www.linkedin.com/in/ulisesjc/",
+    image: "/images/Cortez_Ulises_Photo.jpeg",
+  },
+  {
+    name: "Nallely Saucedo",
+    position: "Professional Development",
+    major: "Chemical Engineering",
+    year: "Senior",
+    email: "",
+    linkedin: "https://www.linkedin.com/in/nallely-saucedo-099977251/",
+    image: "/images/Saucedo_Nallely_Photo.jpg",
+  },
+  {
+    name: "Ari Quezada Caro",
+    position: "Engagement Coordinator",
+    major: "Chemical Engineering",
+    year: "Senior",
+    email: "",
+    linkedin: "https://www.linkedin.com/in/ariquezadacaro/",
+    image: "/images/Ari_sPic.jpg",
+  },
+  {
+    name: "Isai Marcial",
+    position: "Historian",
+    major: "Mechanical Engineering",
+    year: "Sophomore",
+    email: "",
+    linkedin: "#",
+    image: "/images/Sanchez_Kevin_Photo.jpg",
+  },
+];
 
 const Board = () => {
-  const boardMembers = [
-    {
-      name: "Kevin Sanchez",
-      position: "President",
-      major: "Information Science",
-      year: "Senior",
-      email: "",
-      linkedin: "https://www.linkedin.com/in/kevin-sanchez-507564249/",
-      image: "/images/Sanchez_Kevin_Photo.jpg"
-    },
-    {
-      name: "Eduardo Lopez Landeros",
-      position: "Vice President",
-      major: "Aerospace Engineering",
-      year: "Senior", 
-      email: "",
-      linkedin: "https://www.linkedin.com/in/eduardolopezl/",
-      image: "/images/tato.jpg"
-    },
-    {
-      name: "Rachel Zamora",
-      position: "Secretary",
-      major: "Biomedical Engineering",
-      year: "Sophomore",
-      email: "",
-      linkedin: "https://www.linkedin.com/in/rachel-m-zamora/",
-      image: "/images/rachel_headshot.jpg"
-    },
-    {
-      name: "Bernadette Weigang",
-      position: "Treasurer",
-      major: "Aerospace Engineering",
-      year: "Senior",
-      email: "",
-      linkedin: "https://www.linkedin.com/in/bernadette-weigang/",
-      image: "/images/bern.jpg"
-    },
-    {
-      name: "Felipe Garza Cancino",
-      position: "Public Relations",
-      major: "Aerospace Engineering",
-      year: "Senior",
-      email: "",
-      linkedin: "https://www.linkedin.com/in/felipegarzacancino/",
-      image: "/images/Garza_Felipe.jpg"
-    },
-    {
-      name: "Fernanda Arias Aguilar",
-      position: "Social Media Coordinator",
-      major: "Architectual Engineering",
-      year: "Junior",
-      email: "",
-      linkedin: "https://www.linkedin.com/in/fernanda-arias-aguilar-894063280/",
-      image: "/images/Fernanda_Photo.jpg"
-    },
-    {
-      name: "Jose Alberto Saucedo",
-      position: "Academic Chair",
-      major: "Mechanical Engineering",
-      year: "Senior",
-      email: "",
-      linkedin: "https://www.linkedin.com/in/jose-a-saucedo/",
-      image: "/images/Saucedo_Jose_Photo.jpg"
-    },
-    {
-      name: "Alan Ayala",
-      position: "Outreach Coordinator",
-      major: "Computer Science",
-      year: "Junior",
-      email: "",
-      linkedin: "https://www.linkedin.com/in/alan-xa24/",
-      image: "/images/Alan_Ayala_Photo.jpg"
-    },
-    {
-      name: "Ulises Cortez",
-      position: "Webmaster",
-      major: "Computer Science Engineering",
-      year: "Junior",
-      email: "",
-      linkedin: "https://www.linkedin.com/in/ulisesjc/",
-      image: "/images/Cortez_Ulises_Photo.jpeg"
-    },
-    {
-      name: "Nallely Saucedo",
-      position: "Professional Development",
-      major: "Chemical Engineering",
-      year: "Senior",
-      email: "",
-      linkedin: "https://www.linkedin.com/in/nallely-saucedo-099977251/",
-      image: "/images/Saucedo_Nallely_Photo.jpg"
-    },
-    {
-      name: "Ari Quezada Caro",
-      position: "Engagement Coordinator",
-      major: "Chemical Engineering",
-      year: "Senior",
-      email: "",
-      linkedin: "https://www.linkedin.com/in/ariquezadacaro/",
-      image: "/images/Ari_sPic.jpg"
-    },
-    {
-      name: "Isai Marcial",
-      position: "Historian",
-      major: "Mechanical Engineering",
-      year: "Sophomore",
-      email: "",
-      linkedin: "#",
-      image: "/images/Sanchez_Kevin_Photo.jpg"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="py-20 bg-hero-gradient">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -134,8 +134,8 @@ const Board = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {boardMembers.map((member, index) => (
-              <Card 
-                key={member.name} 
+              <Card
+                key={member.name}
                 className="group transition-transform duration-200 hover:-translate-y-1 hover:scale-105 hover:shadow-lg"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -144,6 +144,7 @@ const Board = () => {
                     <img
                       src={member.image}
                       alt={member.name}
+                      loading="lazy"
                       className="w-40 h-40 rounded-full object-cover border-4 border-accent/20 group-hover:border-accent/40 transition-colors"
                     />
                     <div className="absolute -bottom-3 -right-3 w-10 h-10 bg-accent rounded-full flex items-center justify-center">
@@ -155,33 +156,34 @@ const Board = () => {
                     {member.position}
                   </Badge>
                 </CardHeader>
-                
+
                 <CardContent className="space-y-4">
                   <div className="flex flex-wrap gap-2 justify-center">
                     <Badge variant="outline">{member.major}</Badge>
                     <Badge variant="outline">{member.year}</Badge>
                   </div>
-                  
-                  <div className="flex items-center justify-center text-sm text-muted-foreground">
-                  </div>
-                  
-                  <CardDescription className="text-center leading-relaxed">
-                    {member.bio}
-                  </CardDescription>
-                  
+
                   <div className="flex justify-center space-x-4 pt-4 border-t border-border">
-                    <a 
-                      href={`mailto:${member.email}`}
-                      className="p-2 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors group"
-                    >
-                      <Mail className="h-4 w-4 text-accent group-hover:text-accent-glow" />
-                    </a>
-                    <a 
-                      href={member.linkedin}
-                      className="p-2 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors group"
-                    >
-                      <Linkedin className="h-4 w-4 text-accent group-hover:text-accent-glow" />
-                    </a>
+                    {member.email && (
+                      <a
+                        href={`mailto:${member.email}`}
+                        className="p-2 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors group"
+                        aria-label={`Email ${member.name}`}
+                      >
+                        <Mail className="h-4 w-4 text-accent group-hover:text-accent-glow" />
+                      </a>
+                    )}
+                    {member.linkedin !== "#" && (
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors group"
+                        aria-label={`${member.name} on LinkedIn`}
+                      >
+                        <Linkedin className="h-4 w-4 text-accent group-hover:text-accent-glow" />
+                      </a>
+                    )}
                   </div>
                 </CardContent>
               </Card>
@@ -190,7 +192,6 @@ const Board = () => {
         </div>
       </section>
 
-
       {/* Join Board CTA */}
       <section className="py-20 bg-primary">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -198,17 +199,17 @@ const Board = () => {
             Interested in Leadership?
           </h2>
           <p className="text-xl text-primary-foreground/90 mb-8">
-            Board positions become available each academic year. Join us in leading positive change 
+            Board positions become available each academic year. Join us in leading positive change
             and making a lasting impact in the engineering community.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <a
               href="mailto:shpe@university.edu"
               className="inline-flex items-center justify-center px-8 py-3 bg-accent hover:bg-accent-glow text-accent-foreground font-medium rounded-md transition-colors shadow-accent"
             >
               Learn About Elections
             </a>
-            <a 
+            <a
               href="#"
               className="inline-flex items-center justify-center px-8 py-3 border border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-medium rounded-md transition-colors"
             >

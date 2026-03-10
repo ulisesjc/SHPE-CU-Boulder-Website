@@ -1,10 +1,10 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const About = () => {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#faf8f3' }}>
+    <div className="min-h-screen bg-[#faf8f3]">
       <Navigation />
       
       {/* Hero Section */}
@@ -20,7 +20,7 @@ const About = () => {
       </section>
 
       {/* Professional Development, Community Service & Familia */}
-      <section className="py-20" style={{ backgroundColor: '#faf8f3' }}>
+      <section className="py-20 bg-[#faf8f3]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-16">
             {/* Professional Development Card with Image */}
@@ -29,6 +29,7 @@ const About = () => {
                 <img 
                   src="/images/board2024.jpeg"
                   alt="Professional Development" 
+                  loading="lazy"
                   className="w-full h-auto rounded-lg shadow-lg object-cover"
                   style={{ maxHeight: '400px' }}
                 />
@@ -62,6 +63,7 @@ const About = () => {
                 <img 
                   src="/images/conference2025.jpeg"
                   alt="Community Service" 
+                  loading="lazy"
                   className="w-full h-auto rounded-lg shadow-lg object-cover"
                   style={{ maxHeight: '400px' }}
                 />
@@ -71,14 +73,13 @@ const About = () => {
             {/* Familia Card with Placeholder Image Area */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div className="order-2 lg:order-1">
-                <div className="w-full h-[300px] rounded-lg border-2 border-dashed border-accent/40 flex items-center justify-center text-muted-foreground text-sm bg-white/60">
-                <img 
+                <img
                   src="/images/PhillyLove.jpeg"
-                  alt="Community Service" 
+                  alt="Familia community"
+                  loading="lazy"
                   className="w-full h-auto rounded-lg shadow-lg object-cover"
                   style={{ maxHeight: '400px' }}
                 />
-                </div>
               </div>
               <Card className="group hover:shadow-primary transition-all duration-300 order-1 lg:order-2">
                 <CardHeader>
@@ -86,7 +87,7 @@ const About = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground leading-relaxed">
-                    Above all, the heart of our mission is community. We strive tocreate a supportive space where you can find 
+                    Above all, the heart of our mission is community. We strive to create a supportive space where you can find 
                     belonging, encouragement, and lifelong friendships as you navigate your engineering journey.
                   </p>
                 </CardContent>
@@ -97,7 +98,7 @@ const About = () => {
       </section>
 
       {/* Who We Are — National Organization */}
-      <section className="py-16" style={{ backgroundColor: '#f5e6c8' }}>
+      <section className="py-16 bg-[#f5e6c8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
             We are a chapter of the Society of Hispanic Professional Engineers, the nation&apos;s largest association dedicated to fostering Hispanic leadership in STEM.
