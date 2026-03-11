@@ -4,18 +4,23 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-[#faf8f3]">
+    <div className="min-h-screen bg-[#faf8f3] pt-16">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="py-20 bg-hero-gradient">
+      <section
+        className="py-20"
+        style={{
+          backgroundImage: "url('/images/aboutpicture.jpeg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl font-bold text-primary-foreground mb-6 animate-fade-in">
+          <h1 className="text-5xl font-bold text-white mb-6 animate-fade-in drop-shadow-lg">
             About Our Chapter
           </h1>
-          <p className="text-xl text-primary-foreground/90 animate-fade-in max-w-3xl mx-auto">
-            Learn about our mission, values, and the impact we're making in the engineering community.
-          </p>
         </div>
       </section>
 
