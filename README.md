@@ -2,7 +2,7 @@
 
 Official website for the **Society of Hispanic Professional Engineers, University of Colorado Boulder Chapter**.
 
-Live site: [cushpe.com](https://cushpe.com) *(update with your actual URL)*
+Live site: [cushpe.com](https://cushpe.com)
 
 ---
 
