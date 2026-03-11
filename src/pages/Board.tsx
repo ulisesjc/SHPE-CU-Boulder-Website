@@ -1,8 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Mail, Linkedin, GraduationCap } from "lucide-react";
 
 const boardMembers = [
   {
@@ -10,7 +8,6 @@ const boardMembers = [
     position: "President",
     major: "Information Science",
     year: "Senior",
-    email: "",
     linkedin: "https://www.linkedin.com/in/kevin-sanchez-507564249/",
     image: "/images/Sanchez_Kevin_Photo.jpg",
   },
@@ -19,7 +16,6 @@ const boardMembers = [
     position: "Vice President",
     major: "Aerospace Engineering",
     year: "Senior",
-    email: "",
     linkedin: "https://www.linkedin.com/in/eduardolopezl/",
     image: "/images/tato.jpg",
   },
@@ -28,7 +24,6 @@ const boardMembers = [
     position: "Secretary",
     major: "Biomedical Engineering",
     year: "Sophomore",
-    email: "",
     linkedin: "https://www.linkedin.com/in/rachel-m-zamora/",
     image: "/images/rachel_headshot.jpg",
   },
@@ -37,7 +32,6 @@ const boardMembers = [
     position: "Treasurer",
     major: "Aerospace Engineering",
     year: "Senior",
-    email: "",
     linkedin: "https://www.linkedin.com/in/bernadette-weigang/",
     image: "/images/bern.jpg",
   },
@@ -46,16 +40,14 @@ const boardMembers = [
     position: "Public Relations",
     major: "Aerospace Engineering",
     year: "Senior",
-    email: "",
     linkedin: "https://www.linkedin.com/in/felipegarzacancino/",
     image: "/images/Garza_Felipe.jpg",
   },
   {
     name: "Fernanda Arias Aguilar",
     position: "Social Media Coordinator",
-    major: "Architectual Engineering",
+    major: "Architectural Engineering",
     year: "Junior",
-    email: "",
     linkedin: "https://www.linkedin.com/in/fernanda-arias-aguilar-894063280/",
     image: "/images/Fernanda_Photo.jpg",
   },
@@ -64,7 +56,6 @@ const boardMembers = [
     position: "Academic Chair",
     major: "Mechanical Engineering",
     year: "Senior",
-    email: "",
     linkedin: "https://www.linkedin.com/in/jose-a-saucedo/",
     image: "/images/Saucedo_Jose_Photo.jpg",
   },
@@ -73,16 +64,14 @@ const boardMembers = [
     position: "Outreach Coordinator",
     major: "Computer Science",
     year: "Junior",
-    email: "",
     linkedin: "https://www.linkedin.com/in/alan-xa24/",
     image: "/images/Alan_Ayala_Photo.jpg",
   },
   {
     name: "Ulises Cortez",
     position: "Webmaster",
-    major: "Computer Science Engineering",
+    major: "Computer Science",
     year: "Junior",
-    email: "",
     linkedin: "https://www.linkedin.com/in/ulisesjc/",
     image: "/images/Cortez_Ulises_Photo.jpeg",
   },
@@ -91,7 +80,6 @@ const boardMembers = [
     position: "Professional Development",
     major: "Chemical Engineering",
     year: "Senior",
-    email: "",
     linkedin: "https://www.linkedin.com/in/nallely-saucedo-099977251/",
     image: "/images/Saucedo_Nallely_Photo.jpg",
   },
@@ -100,7 +88,6 @@ const boardMembers = [
     position: "Engagement Coordinator",
     major: "Chemical Engineering",
     year: "Senior",
-    email: "",
     linkedin: "https://www.linkedin.com/in/ariquezadacaro/",
     image: "/images/Ari_sPic.jpg",
   },
@@ -109,112 +96,58 @@ const boardMembers = [
     position: "Historian",
     major: "Mechanical Engineering",
     year: "Sophomore",
-    email: "",
-    linkedin: "#",
+    linkedin: null,
     image: "/images/Sanchez_Kevin_Photo.jpg",
   },
 ];
 
 const Board = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pt-16">
       <Navigation />
 
       {/* Hero Section */}
-      <section className="py-20 bg-hero-gradient">
+      <section className="py-10 bg-hero-gradient">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl font-bold text-primary-foreground mb-6 animate-fade-in">
-            Meet Our Board
+          <h1 className="text-3xl font-bold text-primary-foreground animate-fade-in">
+            2025–2026 Leadership Team
           </h1>
         </div>
       </section>
 
       {/* Board Members */}
-      <section className="py-20">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {boardMembers.map((member, index) => (
-              <Card
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {boardMembers.map((member) => (
+              <div
                 key={member.name}
-                className="group transition-transform duration-200 hover:-translate-y-1 hover:scale-105 hover:shadow-lg"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="bg-card border border-border rounded-xl p-6 flex flex-col items-center text-center hover:shadow-md transition-shadow"
               >
-                <CardHeader className="text-center pb-4">
-                  <div className="relative mx-auto mb-6">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      loading="lazy"
-                      className="w-40 h-40 rounded-full object-cover border-4 border-accent/20 group-hover:border-accent/40 transition-colors"
-                    />
-                    <div className="absolute -bottom-3 -right-3 w-10 h-10 bg-accent rounded-full flex items-center justify-center">
-                      <GraduationCap className="h-5 w-5 text-accent-foreground" />
-                    </div>
-                  </div>
-                  <CardTitle className="text-primary text-xl">{member.name}</CardTitle>
-                  <Badge variant="secondary" className="w-fit mx-auto">
-                    {member.position}
-                  </Badge>
-                </CardHeader>
-
-                <CardContent className="space-y-4">
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    <Badge variant="outline">{member.major}</Badge>
-                    <Badge variant="outline">{member.year}</Badge>
-                  </div>
-
-                  <div className="flex justify-center space-x-4 pt-4 border-t border-border">
-                    {member.email && (
-                      <a
-                        href={`mailto:${member.email}`}
-                        className="p-2 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors group"
-                        aria-label={`Email ${member.name}`}
-                      >
-                        <Mail className="h-4 w-4 text-accent group-hover:text-accent-glow" />
-                      </a>
-                    )}
-                    {member.linkedin !== "#" && (
-                      <a
-                        href={member.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors group"
-                        aria-label={`${member.name} on LinkedIn`}
-                      >
-                        <Linkedin className="h-4 w-4 text-accent group-hover:text-accent-glow" />
-                      </a>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  loading="lazy"
+                  className="w-28 h-28 rounded-full object-cover mb-4 border-2 border-accent/30"
+                />
+                <p className="font-semibold text-foreground">{member.name}</p>
+                <Badge variant="secondary" className="mt-1 mb-3">
+                  {member.position}
+                </Badge>
+                <p className="text-sm text-muted-foreground">{member.major}</p>
+                <p className="text-sm text-muted-foreground mb-4">{member.year}</p>
+                {member.linkedin && (
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-accent hover:underline"
+                  >
+                    LinkedIn
+                  </a>
+                )}
+              </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Join Board CTA */}
-      <section className="py-20 bg-primary">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-primary-foreground mb-6">
-            Interested in Leadership?
-          </h2>
-          <p className="text-xl text-primary-foreground/90 mb-8">
-            Board positions become available each academic year. Join us in leading positive change
-            and making a lasting impact in the engineering community.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:shpe@university.edu"
-              className="inline-flex items-center justify-center px-8 py-3 bg-accent hover:bg-accent-glow text-accent-foreground font-medium rounded-md transition-colors shadow-accent"
-            >
-              Learn About Elections
-            </a>
-            <a
-              href="#"
-              className="inline-flex items-center justify-center px-8 py-3 border border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-medium rounded-md transition-colors"
-            >
-              View Requirements
-            </a>
           </div>
         </div>
       </section>
