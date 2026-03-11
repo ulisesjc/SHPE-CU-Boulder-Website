@@ -47,7 +47,7 @@ const Events = () => {
   // Instagram post IDs - Replace with your actual Instagram post IDs
   // Format: Extract the post ID from the Instagram URL (e.g., from https://www.instagram.com/p/DOEb3TpDg57/, the ID is DOEb3TpDg57)
   const instagramPosts = [
-    "DT3qdH1jc0Y", // Replace with actual post IDs
+    "DVuFc8bibz2", // Replace with actual post IDs
     // Add more post IDs as needed
   ];
 
