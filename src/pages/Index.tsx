@@ -19,9 +19,9 @@ const galleryImages = [
 ];
 
 const upcomingEventsImages = [
-  { src: "/images/ExecDeadline.png", alt: "Upcoming event" },
-  { src: "/images/ExecDeadline.png", alt: "Upcoming event" },
-  { src: "/images/ExecDeadline.png", alt: "Upcoming event" },
+  { src: "/images/StudyEvent.jpeg", alt: "Upcoming event" },
+  { src: "/images/StudyEvent.jpeg", alt: "Upcoming event" },
+  { src: "/images/StudyEvent.jpeg", alt: "Upcoming event" },
 ];
 
 const sponsors = [
