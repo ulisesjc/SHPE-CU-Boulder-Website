@@ -85,7 +85,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-border animate-slide-up">
+          <div className="md:hidden bg-background border-t border-border animate-slide-up">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
                 <Link
@@ -110,7 +110,6 @@ const Navigation = () => {
                   className="text-muted-foreground hover:text-primary transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <LinkedInIcon />
                 </a>
                 <a
                   href="https://www.instagram.com/shpe_cuboulder/"
