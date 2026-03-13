@@ -66,7 +66,7 @@ const About = () => {
               </Card>
               <div>
                 <img 
-                  src="/images/conference2025.jpeg"
+                  src="/images/scienceday.jpeg"
                   alt="Community Service" 
                   loading="lazy"
                   className="w-full h-auto rounded-lg shadow-lg object-cover"
