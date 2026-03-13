@@ -19,9 +19,9 @@ const galleryImages = [
 ];
 
 const upcomingEventsImages = [
-  { src: "/images/StudyEvent.jpeg", alt: "Upcoming event" },
-  { src: "/images/StudyEvent.jpeg", alt: "Upcoming event" },
-  { src: "/images/StudyEvent.jpeg", alt: "Upcoming event" },
+  { src: "/images/sciencebanner.png", alt: "Upcoming event" },
+  { src: "/images/sciencebanner.png", alt: "Upcoming event" },
+  { src: "/images/sciencebanner.png", alt: "Upcoming event" },
 ];
 
 const sponsors = [
@@ -123,7 +123,7 @@ const Index = () => {
       <div className="fixed inset-0 z-0">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url(/images/MainConf2024.jpeg)" }}
+          style={{ backgroundImage: "url(/images/MainConf2024.png)" }}
         />
         <div className="absolute inset-0 bg-primary/60" />
       </div>
@@ -134,12 +134,11 @@ const Index = () => {
 
         {/* Hero Section */}
         <section className="relative min-h-[80vh] flex items-center justify-center">
-          <div className="absolute inset-0 bg-primary/20" />
           <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h1 className="text-[clamp(2.5rem,6vw,5rem)] leading-tight font-bold text-accent mb-6">
+            <h1 className="text-[clamp(2.5rem,6vw,5rem)] leading-tight font-bold text-white drop-shadow-lg mb-4">
               Society of Hispanic Professional Engineers
             </h1>
-            <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto text-center">
+            <p className="text-xl md:text-2xl text-white/80 max-w-2xl mx-auto">
               University of Colorado Boulder Chapter
             </p>
           </div>
